@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pellegrino-b8c0b2renovation.netlify.app/sitemap.xml
