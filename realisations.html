@@ -1,1232 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Réalisations — Pellegrino Rénovation</title>
-<meta name="description" content="Aperçu de chantiers de rénovation menés dans le Gers : plâtrerie, isolation, carrelage, peinture.">
-<link rel="canonical" href="https://pellegrino-b8c0b2renovation.netlify.app/realisations">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Réalisations — Pellegrino Rénovation">
-<meta property="og:description" content="Aperçu de chantiers de rénovation menés dans le Gers : plâtrerie, isolation, carrelage, peinture.">
-<meta property="og:url" content="https://pellegrino-b8c0b2renovation.netlify.app/realisations">
-<meta property="og:image" content="https://pellegrino-b8c0b2renovation.netlify.app/images/lanne-salon-05-cheminee-caissons.jpg">
-<meta property="og:locale" content="fr_FR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Réalisations — Pellegrino Rénovation">
-<meta name="twitter:description" content="Aperçu de chantiers de rénovation menés dans le Gers : plâtrerie, isolation, carrelage, peinture.">
-<meta name="twitter:image" content="https://pellegrino-b8c0b2renovation.netlify.app/images/lanne-salon-05-cheminee-caissons.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "name": "Pellegrino Rénovation",
-  "image": "https://pellegrino-b8c0b2renovation.netlify.app/images/lanne-salon-05-cheminee-caissons.jpg",
-  "description": "Plâtrier-staffeur et sculpteur bas-relief. Plâtrerie, isolation, carrelage et peinture. Artisan à Condom, intervient dans tout le Gers.",
-  "url": "https://pellegrino-b8c0b2renovation.netlify.app/",
-  "telephone": "+33648061892",
-  "priceRange": "€€",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "9 rue Grichet",
-    "postalCode": "32100",
-    "addressLocality": "Condom",
-    "addressRegion": "Gers",
-    "addressCountry": "FR"
-  },
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Gers"
-  }
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --chaux:#F4EEE0;
-  --chaux-warm:#EDE3CC;
-  --ardoise:#24262A;
-  --ardoise-soft:#4A4D52;
-  --terre-cuite:#BE5A2E;
-  --terre-cuite-dark:#8A3D1D;
-  --pierre:#A79878;
-  --pierre-light:#D9CFB8;
-  --sauge:#5F6E52;
-  --blanc:#FFFCF6;
-  --ombre: 0 18px 40px -18px rgba(36,38,42,.35);
-  --rayon: 2px;
-}
-
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  background:var(--chaux);
-  color:var(--ardoise);
-  font-family:'Work Sans', sans-serif;
-  font-size:16px;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-h1,h2,h3,h4{
-  font-family:'Fraunces', serif;
-  font-weight:600;
-  line-height:1.08;
-  margin:0 0 .5em 0;
-  letter-spacing:-.01em;
-  color:var(--ardoise);
-}
-.mono{
-  font-family:'IBM Plex Mono', monospace;
-  letter-spacing:.02em;
-}
-.wrap{
-  max-width:1180px;
-  margin:0 auto;
-  padding:0 28px;
-}
-:focus-visible{
-  outline:3px solid var(--terre-cuite);
-  outline-offset:3px;
-}
-@media (prefers-reduced-motion: reduce){
-  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
-}
-
-/* ---------- NAV ---------- */
-.site-nav{
-  position:sticky; top:0; z-index:50;
-  background:rgba(244,238,224,.92);
-  backdrop-filter:blur(6px);
-  border-bottom:1px solid rgba(36,38,42,.08);
-}
-.nav-inner{
-  max-width:1180px; margin:0 auto; padding:16px 28px;
-  display:flex; align-items:center; justify-content:space-between; gap:24px;
-}
-.brand{
-  display:flex; align-items:baseline; gap:9px;
-  font-family:'Fraunces', serif; font-weight:600; font-size:1.28rem;
-  color:var(--ardoise);
-}
-.brand small{
-  font-family:'IBM Plex Mono', monospace;
-  font-size:.6rem; font-weight:400; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--terre-cuite-dark);
-}
-.nav-links{
-  display:flex; align-items:center; gap:30px;
-  font-size:.95rem; font-weight:500;
-}
-.nav-links a{
-  position:relative; padding:4px 0; color:var(--ardoise-soft);
-  transition:color .2s ease;
-}
-.nav-links a:hover{color:var(--terre-cuite-dark);}
-.nav-links a.active{color:var(--ardoise);}
-.nav-links a.active::after{
-  content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px;
-  background:var(--terre-cuite);
-}
-.nav-cta{
-  background:var(--terre-cuite); color:var(--blanc)!important;
-  padding:11px 20px; border-radius:var(--rayon);
-  font-weight:600; font-size:.9rem; white-space:nowrap;
-  transition:background .2s ease;
-}
-.nav-cta:hover{background:var(--terre-cuite-dark);}
-.nav-toggle{display:none;}
-.burger{display:none;}
-
-@media (max-width:860px){
-  .nav-links{
-    position:fixed; inset:64px 0 0 0; background:var(--chaux);
-    flex-direction:column; align-items:flex-start; gap:0;
-    padding:8px 28px 28px;
-    transform:translateY(-8px); opacity:0; pointer-events:none;
-    transition:opacity .18s ease, transform .18s ease;
-    border-top:1px solid rgba(36,38,42,.08);
-  }
-  .nav-links a{padding:14px 0; width:100%; border-bottom:1px solid rgba(36,38,42,.08); font-size:1.05rem;}
-  .nav-links .nav-cta{border-bottom:none; text-align:center; margin-top:10px;}
-  .nav-toggle:checked ~ .nav-links{opacity:1; pointer-events:auto; transform:translateY(0);}
-  .burger{
-    display:flex; flex-direction:column; gap:5px; width:26px; cursor:pointer; z-index:60;
-  }
-  .burger span{height:2px; background:var(--ardoise); display:block; transition:transform .2s ease, opacity .2s ease;}
-  .nav-toggle:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .nav-toggle:checked ~ .burger span:nth-child(2){opacity:0;}
-  .nav-toggle:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-}
-
-/* ---------- BUTTONS ---------- */
-.btn{
-  display:inline-flex; align-items:center; gap:10px;
-  padding:14px 26px; border-radius:var(--rayon);
-  font-weight:600; font-size:.95rem; cursor:pointer; border:1px solid transparent;
-  transition:background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
-}
-.btn-primary{background:var(--terre-cuite); color:var(--blanc);}
-.btn-primary:hover{background:var(--terre-cuite-dark); transform:translateY(-1px);}
-.btn-ghost{border-color:var(--ardoise); color:var(--ardoise);}
-.btn-ghost:hover{background:var(--ardoise); color:var(--chaux);}
-.btn-ghost-light{border-color:rgba(255,252,246,.6); color:var(--blanc);}
-.btn-ghost-light:hover{background:var(--blanc); color:var(--terre-cuite-dark);}
-
-/* ---------- HERO ---------- */
-.hero{
-  padding:76px 0 64px;
-  overflow:hidden;
-}
-.hero-inner{
-  display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;
-}
-.eyebrow{
-  font-family:'IBM Plex Mono', monospace; font-size:.78rem; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--terre-cuite-dark); font-weight:500;
-  display:flex; align-items:center; gap:10px; margin-bottom:18px;
-}
-.eyebrow::before{content:''; width:22px; height:1px; background:var(--terre-cuite-dark);}
-.hero h1{
-  font-size:clamp(2.3rem, 4.4vw, 3.4rem);
-  max-width:12.5ch;
-}
-.hero h1 em{
-  font-style:italic; color:var(--terre-cuite-dark);
-}
-.hero p.lede{
-  font-size:1.12rem; color:var(--ardoise-soft); max-width:46ch; margin:22px 0 32px;
-}
-.hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
-
-.crosssection-card{
-  background:var(--blanc); border:1px solid rgba(36,38,42,.08);
-  border-radius:6px; box-shadow:var(--ombre); padding:26px 22px 20px;
-}
-.crosssection-card img{width:100%; height:230px; object-fit:cover; border-radius:3px; display:block;}
-.crosssection-card .cap{
-  display:flex; justify-content:space-between; align-items:baseline;
-  font-family:'IBM Plex Mono', monospace; font-size:.7rem; color:var(--ardoise-soft);
-  letter-spacing:.06em; margin-top:14px; padding-top:14px; border-top:1px dashed var(--pierre-light);
-}
-
-/* ---------- STRIP ---------- */
-.strip{
-  border-top:1px solid rgba(36,38,42,.1);
-  border-bottom:1px solid rgba(36,38,42,.1);
-  background:var(--chaux-warm);
-}
-.strip-inner{
-  display:grid; grid-template-columns:repeat(4,1fr);
-  max-width:1180px; margin:0 auto;
-}
-.strip-item{
-  padding:22px 28px; border-right:1px solid rgba(36,38,42,.1);
-}
-.strip-item:last-child{border-right:none;}
-.strip-item .num{
-  font-family:'Fraunces', serif; font-weight:600; font-size:1.5rem; color:var(--terre-cuite-dark);
-  display:block;
-}
-.strip-item .lab{
-  font-family:'IBM Plex Mono', monospace; font-size:.72rem; color:var(--ardoise-soft);
-  letter-spacing:.04em; text-transform:uppercase;
-}
-@media (max-width:760px){
-  .strip-inner{grid-template-columns:repeat(2,1fr);}
-  .strip-item{border-bottom:1px solid rgba(36,38,42,.1);}
-}
-
-/* ---------- SECTIONS ---------- */
-section{padding:84px 0;}
-.section-head{max-width:640px; margin-bottom:48px;}
-.section-head .eyebrow{margin-bottom:14px;}
-.section-head h2{font-size:clamp(1.8rem,3vw,2.4rem);}
-.section-head p{color:var(--ardoise-soft); font-size:1.05rem; margin-top:14px;}
-
-/* metier grid */
-.metier-grid{
-  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
-  background:rgba(36,38,42,.12); border:1px solid rgba(36,38,42,.12);
-}
-.metier-card{
-  background:var(--blanc); padding:32px 28px 28px; display:flex; flex-direction:column; gap:14px;
-  transition:background .2s ease;
-}
-.metier-card:hover{background:var(--chaux-warm);}
-.metier-card .icon{width:100%; height:150px; border-radius:3px; overflow:hidden; background:var(--chaux-warm);}
-.metier-card .icon img{width:100%; height:100%; object-fit:cover; display:block;}
-.metier-card .icon svg{width:54px; height:40px; display:block; margin:8px 0;}
-.metier-card h3{font-size:1.15rem;}
-.metier-card p{color:var(--ardoise-soft); font-size:.94rem; margin:0; flex:1;}
-.metier-card .go{
-  font-family:'IBM Plex Mono', monospace; font-size:.75rem; color:var(--terre-cuite-dark);
-  display:inline-flex; align-items:center; gap:6px;
-}
-@media (max-width:560px){.metier-grid{grid-template-columns:1fr;}}
-
-/* pourquoi */
-.pourquoi-grid{
-  display:grid; grid-template-columns:repeat(3,1fr); gap:40px;
-}
-.pourquoi-item .tag{
-  font-family:'IBM Plex Mono', monospace; font-size:.72rem; color:var(--terre-cuite-dark);
-  text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px; display:block;
-}
-.pourquoi-item h3{font-size:1.15rem; margin-bottom:8px;}
-.pourquoi-item p{color:var(--ardoise-soft); font-size:.95rem; margin:0;}
-@media (max-width:760px){.pourquoi-grid{grid-template-columns:1fr; gap:32px;}}
-
-/* CTA band */
-.presse-section{
-  background:var(--chaux-warm);
-  border-top:1px solid rgba(36,38,42,.1);
-  border-bottom:1px solid rgba(36,38,42,.1);
-}
-.presse-inner{
-  display:grid; grid-template-columns:auto 1fr; gap:32px; align-items:start;
-  max-width:900px; margin:0 auto; padding:64px 28px;
-}
-.presse-mark{
-  font-family:'Fraunces', serif; font-weight:900; font-size:2.6rem; color:var(--pierre);
-  line-height:1; user-select:none;
-}
-.presse-inner h2{font-size:1.5rem; margin-bottom:14px;}
-.presse-inner p{color:var(--ardoise-soft); font-size:1.02rem; margin:0 0 16px; max-width:60ch;}
-.presse-source{
-  font-family:'IBM Plex Mono', monospace; font-size:.75rem; color:var(--ardoise-soft);
-  letter-spacing:.03em;
-}
-@media (max-width:640px){
-  .presse-inner{grid-template-columns:1fr; gap:12px;}
-  .presse-mark{display:none;}
-}
-
-.cta-band{
-  background:var(--ardoise); color:var(--blanc); padding:70px 0; text-align:left;
-}
-.cta-band .wrap{display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;}
-.cta-band h2{color:var(--blanc); font-size:clamp(1.7rem,3vw,2.2rem); max-width:16ch;}
-.cta-band p{color:rgba(255,252,246,.72); margin-top:10px; max-width:40ch;}
-.cta-band .ctas{display:flex; gap:14px; flex-wrap:wrap;}
-
-/* ---------- FOOTER ---------- */
-footer{background:var(--chaux-warm); padding:56px 0 28px; border-top:1px solid rgba(36,38,42,.1);}
-.footer-grid{
-  display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:40px;
-}
-.footer-grid h4{
-  font-family:'IBM Plex Mono', monospace; font-size:.72rem; text-transform:uppercase;
-  letter-spacing:.08em; color:var(--ardoise-soft); margin-bottom:14px; font-weight:500;
-}
-.footer-grid p, .footer-grid li{color:var(--ardoise-soft); font-size:.93rem;}
-.footer-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px;}
-.footer-grid ul a:hover{color:var(--terre-cuite-dark);}
-.footer-bottom{
-  border-top:1px solid rgba(36,38,42,.12); padding-top:22px;
-  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-  font-family:'IBM Plex Mono', monospace; font-size:.72rem; color:var(--ardoise-soft);
-}
-@media (max-width:760px){.footer-grid{grid-template-columns:1fr; gap:28px;}}
-
-/* ---------- Page banner (sous-pages) ---------- */
-.page-banner{
-  padding:56px 0 44px; border-bottom:1px solid rgba(36,38,42,.1);
-  background:var(--chaux-warm);
-}
-.page-banner h1{font-size:clamp(2rem,3.6vw,2.7rem); max-width:16ch;}
-.page-banner p{color:var(--ardoise-soft); max-width:52ch; margin-top:14px; font-size:1.05rem;}
-
-/* ---------- Services detail ---------- */
-.service-row{
-  display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center;
-  padding:56px 0; border-bottom:1px solid rgba(36,38,42,.1);
-}
-.service-row:last-child{border-bottom:none;}
-.service-row.reverse{grid-template-columns:1.1fr .9fr;}
-.service-row.reverse .service-visual{order:2;}
-.service-num{
-  font-family:'IBM Plex Mono', monospace; color:var(--pierre); font-size:.8rem; margin-bottom:10px; display:block;
-}
-.service-row h2{font-size:1.7rem;}
-.service-row ul{padding:0; margin:18px 0 0; list-style:none; display:flex; flex-direction:column; gap:9px;}
-.service-row ul li{
-  padding-left:20px; position:relative; color:var(--ardoise-soft); font-size:.96rem;
-}
-.service-row ul li::before{
-  content:''; position:absolute; left:0; top:9px; width:8px; height:1px; background:var(--terre-cuite-dark);
-}
-.dtu-tag{
-  display:inline-block; margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:.72rem;
-  color:var(--terre-cuite-dark); background:rgba(190,90,46,.1); padding:6px 12px; border-radius:2px;
-}
-@media (max-width:860px){
-  .service-row, .service-row.reverse{grid-template-columns:1fr;}
-  .service-row.reverse .service-visual{order:0;}
-}
-
-/* ---------- Réalisations ---------- */
-.feature-project{
-  padding:56px 0 30px;
-  border-top:1px solid rgba(36,38,42,.1);
-}
-.feature-project:first-of-type{border-top:none; padding-top:0;}
-.feature-project .section-head{margin-bottom:36px;}
-.feature-intro{
-  background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px;
-  padding:26px 30px; margin-bottom:36px; box-shadow:var(--ombre);
-}
-.feature-intro p{color:var(--ardoise-soft); font-size:1rem; margin:0; max-width:70ch;}
-.feature-intro p strong{color:var(--ardoise); font-weight:600;}
-.feature-grid{
-  display:grid; grid-template-columns:1.3fr 1fr 1fr; grid-template-rows:auto auto; gap:18px;
-}
-.feature-grid .fg-item:first-child{grid-row:1 / 3;}
-.feature-grid.reverse .fg-item:first-child{grid-row:1 / 3; grid-column:3;}
-.feature-grid.reverse{grid-template-columns:1fr 1fr 1.3fr;}
-.feature-visual{
-  position:relative; border-radius:5px; overflow:hidden; background:var(--chaux-warm);
-  border:1px solid rgba(36,38,42,.1); height:100%;
-}
-.feature-visual img{width:100%; height:100%; object-fit:cover; display:block; min-height:180px;}
-.feature-cap{
-  position:absolute; left:0; right:0; bottom:0;
-  background:linear-gradient(0deg, rgba(36,38,42,.82), transparent);
-  color:var(--blanc); padding:30px 18px 14px;
-}
-.feature-cap .step{
-  font-family:'IBM Plex Mono', monospace; font-size:.66rem; text-transform:uppercase;
-  letter-spacing:.08em; color:var(--pierre-light); display:block; margin-bottom:4px;
-}
-.feature-cap h4{color:var(--blanc); font-size:.98rem; margin:0; font-weight:500; font-family:'Work Sans', sans-serif;}
-@media (max-width:900px){
-  .feature-grid{grid-template-columns:1fr 1fr;}
-  .feature-grid .fg-item:first-child{grid-row:auto; grid-column:1/-1;}
-}
-@media (max-width:560px){
-  .feature-grid{grid-template-columns:1fr;}
-}
-
-.savoir-faire-section{
-  padding:60px 0 40px;
-  border-bottom:1px solid rgba(36,38,42,.1);
-  margin-bottom:8px;
-}
-.savoir-faire-intro{
-  background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px;
-  padding:26px 30px; margin-bottom:30px; box-shadow:var(--ombre);
-}
-.savoir-faire-intro p{color:var(--ardoise-soft); font-size:1rem; margin:0; max-width:70ch;}
-.savoir-faire-intro p strong{color:var(--ardoise); font-weight:600;}
-.badge-exercice{
-  display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:.68rem;
-  text-transform:uppercase; letter-spacing:.06em; color:var(--terre-cuite-dark);
-  background:rgba(190,90,46,.1); padding:5px 11px; border-radius:2px; margin-bottom:14px;
-}
-
-.real-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
-.real-card{
-  background:var(--blanc); border:1px solid rgba(36,38,42,.1); border-radius:4px; overflow:hidden;
-  box-shadow:var(--ombre);
-}
-.real-visual{height:170px; position:relative; overflow:hidden; background:var(--chaux-warm);}
-.real-visual img{width:100%; height:100%; object-fit:cover; display:block;}
-.section-subhead{
-  font-family:'IBM Plex Mono', monospace; font-size:.72rem; text-transform:uppercase;
-  letter-spacing:.08em; color:var(--ardoise-soft); margin:60px 0 22px;
-  padding-top:40px; border-top:1px solid rgba(36,38,42,.1);
-}
-.real-grid + .section-subhead{margin-top:64px;}
-.real-body{padding:20px 22px 24px;}
-.real-tags{display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap;}
-.real-tags span{
-  font-family:'IBM Plex Mono', monospace; font-size:.66rem; text-transform:uppercase;
-  letter-spacing:.05em; padding:4px 9px; border:1px solid var(--pierre-light); border-radius:2px; color:var(--ardoise-soft);
-}
-.real-body h3{font-size:1.05rem; margin-bottom:6px;}
-.real-body p{color:var(--ardoise-soft); font-size:.9rem; margin:0;}
-@media (max-width:860px){.real-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:560px){.real-grid{grid-template-columns:1fr;}}
-
-/* ---------- Contact ---------- */
-.contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:64px;}
-.info-block{margin-bottom:30px;}
-.info-block h4{
-  font-family:'IBM Plex Mono', monospace; font-size:.72rem; text-transform:uppercase;
-  letter-spacing:.08em; color:var(--terre-cuite-dark); margin-bottom:8px; font-weight:500;
-}
-.info-block p, .info-block a{font-size:1.02rem; color:var(--ardoise);}
-.info-block .mono{font-size:1.1rem;}
-.map-card{
-  margin-top:8px; background:var(--blanc); border:1px solid rgba(36,38,42,.1); border-radius:6px;
-  padding:20px; box-shadow:var(--ombre);
-}
-.map-card .cap{
-  font-family:'IBM Plex Mono', monospace; font-size:.7rem; color:var(--ardoise-soft); margin-top:10px;
-}
-form{background:var(--blanc); border:1px solid rgba(36,38,42,.1); border-radius:6px; padding:34px; box-shadow:var(--ombre);}
-.form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
-.field{display:flex; flex-direction:column; gap:7px;}
-.field.full{grid-column:1/-1;}
-label{font-size:.82rem; font-weight:500; color:var(--ardoise-soft);}
-input, select, textarea{
-  border:1px solid var(--pierre-light); border-radius:3px; padding:12px 14px;
-  font-family:'Work Sans', sans-serif; font-size:.95rem; background:var(--chaux);
-  color:var(--ardoise);
-}
-input:focus, select:focus, textarea:focus{outline:2px solid var(--terre-cuite); border-color:var(--terre-cuite);}
-textarea{resize:vertical; min-height:110px;}
-.form-note{
-  font-size:.82rem; color:var(--ardoise-soft); margin-top:14px; padding-top:14px;
-  border-top:1px dashed var(--pierre-light);
-}
-.form-status{
-  margin-top:16px; font-size:.9rem; font-weight:500; min-height:1.2em;
-}
-.form-status.sending{color:var(--ardoise-soft);}
-.form-status.success{color:var(--sauge);}
-.form-status.error{color:var(--terre-cuite-dark);}
-button[disabled]{opacity:.6; cursor:not-allowed;}
-@media (max-width:860px){.contact-grid{grid-template-columns:1fr;} .form-row{grid-template-columns:1fr;}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réalisations — Pellegrino Rénovation</title>
+  <meta name="description" content="Aperçu de chantiers de rénovation menés dans le Gers : plâtrerie, isolation, carrelage, peinture." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--chaux:#F4EEE0; --chaux-warm:#EDE3CC; --ardoise:#24262A; --ardoise-soft:#4A4D52; --terre-cuite:#BE5A2E; --terre-cuite-dark:#8A3D1D; --pierre:#A79878; --pierre-light:#D9CFB8; --sauge:#5F6E52; --blanc:#FFFCF6; --ombre:0 18px 40px -18px rgba(36,38,42,.35); --rayon:2px;}
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{margin:0; background:var(--chaux); color:var(--ardoise); font-family:"Work Sans", sans-serif; line-height:1.6; font-size:16px; -webkit-font-smoothing:antialiased;}
+    img{max-width:100%; display:block;}
+    a{text-decoration:none; color:inherit;}
+    h1,h2,h3,h4{margin:0 0 .55em; font-family:"Fraunces", serif; line-height:1.08; letter-spacing:-.02em; color:var(--ardoise); font-weight:600;}
+    p{margin:0;}
+    .mono{font-family:"IBM Plex Mono", monospace; letter-spacing:.04em;}
+    .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:15px 26px; border-radius:2px; font-weight:600; font-size:.95rem; transition:all .2s ease; border:1px solid transparent; cursor:pointer; text-decoration:none;}
+    .btn-primary{background:var(--terre-cuite); color:var(--blanc);}
+    .btn-primary:hover{background:var(--terre-cuite-dark); transform:translateY(-1px);}
+    .btn-ghost-light{border-color:rgba(255,252,246,.6); background:transparent; color:var(--blanc);}
+    .btn-ghost-light:hover{background:var(--blanc); color:var(--terre-cuite-dark);}
+    .site-nav{position:sticky; top:0; z-index:50; background:rgba(244,238,224,.92); backdrop-filter:blur(8px); border-bottom:1px solid rgba(36,38,42,.08);}
+    .nav-inner{max-width:1180px; margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
+    .brand{display:flex; align-items:baseline; gap:8px; font-family:"Fraunces", serif; font-size:1.2rem; font-weight:600; color:var(--ardoise);}
+    .brand small{font-family:"IBM Plex Mono", monospace; font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark);}
+    .nav-links{display:flex; align-items:center; gap:30px; font-size:.96rem; font-weight:500;}
+    .nav-links a{position:relative; color:var(--ardoise-soft); padding:4px 0;}
+    .nav-links a:hover{color:var(--terre-cuite-dark);}
+    .nav-links a.active{color:var(--ardoise);}
+    .nav-links a.active::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--terre-cuite);}
+    .nav-cta{background:var(--terre-cuite); color:var(--blanc)!important; padding:12px 20px; border-radius:2px; font-weight:600; white-space:nowrap;}
+    .nav-cta:hover{background:var(--terre-cuite-dark);}
+    .nav-toggle{display:none;}
+    .burger{display:none;}
+    @media (max-width:860px){.nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38,42,.08); opacity:0; pointer-events:none; transform:translateY(-8px); transition:opacity .2s ease, transform .2s ease;} .nav-toggle:checked ~ .nav-links{opacity:1; pointer-events:auto; transform:translateY(0);} .nav-links a{width:100%; padding:14px 0; border-bottom:1px solid rgba(36,38,42,.08);} .nav-links .nav-cta{width:100%; margin-top:12px; text-align:center; border-bottom:none;} .burger{display:flex; flex-direction:column; gap:5px; width:28px; cursor:pointer;} .burger span{display:block; background:var(--ardoise); height:2px;} .nav-toggle:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);} .nav-toggle:checked ~ .burger span:nth-child(2){opacity:0;} .nav-toggle:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}}
+    .page-banner{background:var(--chaux-warm); border-bottom:1px solid rgba(36,38,42,.1); padding:56px 0 42px;}
+    .page-banner h1{font-size:clamp(2.2rem, 4vw, 3rem); margin-bottom:12px; max-width:16ch;}
+    .page-banner p{max-width:56ch; color:var(--ardoise-soft); font-size:1.05rem;}
+    .section-head{max-width:700px; margin-bottom:32px;}
+    .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:"IBM Plex Mono", monospace; font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark); margin-bottom:18px;}
+    .eyebrow::before{content:""; width:20px; height:1px; background:var(--terre-cuite-dark); display:block;}
+    .section-head h2{font-size:clamp(1.9rem, 3vw, 2.8rem);} 
+    .section-head p{font-size:1.04rem; color:var(--ardoise-soft);}
+    .feature-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px;}
+    .feature-card{background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; overflow:hidden; box-shadow:var(--ombre);}
+    .feature-card img{width:100%; height:220px; object-fit:cover; display:block;}
+    .feature-body{padding:18px 18px 20px;}
+    .feature-tag{display:inline-block; font-family:"IBM Plex Mono", monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--terre-cuite-dark); margin-bottom:8px;}
+    .feature-card h3{font-size:1.15rem; margin-bottom:8px;}
+    .feature-card p{color:var(--ardoise-soft);}
+    .project-block{padding:24px 0 10px;}
+    .project-head{display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:18px;}
+    .project-head h3{font-size:1.4rem;}
+    .project-head span{font-family:"IBM Plex Mono", monospace; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ardoise-soft);}
+    .gallery-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px;}
+    .gallery-item{background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; overflow:hidden; box-shadow:var(--ombre);}
+    .gallery-item img{width:100%; height:240px; object-fit:cover; display:block;}
+    .gallery-item .caption{padding:14px 16px 16px; font-family:"IBM Plex Mono", monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ardoise-soft);}
+    .cta-band{background:var(--ardoise); color:var(--blanc); padding:64px 0;}
+    .cta-band .wrap{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+    .cta-band h2{color:var(--blanc); font-size:clamp(1.8rem,3vw,2.4rem); max-width:16ch;}
+    .cta-band p{color:rgba(255,252,246,.72); margin-top:8px; max-width:38ch;}
+    .cta-band .ctas{display:flex; flex-wrap:wrap; gap:14px;}
+    footer{background:var(--chaux-warm); border-top:1px solid rgba(36,38,42,.1); padding:52px 0 28px;}
+    .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:32px;}
+    .footer-grid h4{margin-bottom:14px; font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ardoise-soft);}
+    .footer-grid p, .footer-grid li{color:var(--ardoise-soft); font-size:.93rem;}
+    .footer-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;}
+    .footer-bottom{border-top:1px solid rgba(36,38,42,.12); padding-top:18px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:"IBM Plex Mono", monospace; font-size:.72rem; color:var(--ardoise-soft);}
+    @media (max-width:980px){.feature-grid,.gallery-grid{grid-template-columns:repeat(2, minmax(0,1fr));} .footer-grid{grid-template-columns:1fr;}}
+    @media (max-width:560px){.feature-grid,.gallery-grid{grid-template-columns:1fr;} .nav-inner{padding:14px 20px;} .wrap{padding:0 20px;} .project-head{display:block;} .cta-band .wrap{align-items:flex-start;}}
+  </style>
 </head>
 <body>
-<header class="site-nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">Pellegrino <small>Rénovation</small></a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav class="nav-links">
-      <a class="nav-links-item" href="index.html">Accueil</a>
-<a class="nav-links-item" href="services.html">Prestations</a>
-<a class="nav-links-item active" href="realisations.html">Réalisations</a>
-<a class="nav-links-item" href="contact.html">Contact</a>
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Pellegrino <small>Rénovation</small></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Prestations</a>
+        <a class="active" href="realisations.html">Réalisations</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Demander un devis</a>
+      </nav>
+      <label class="burger" for="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+    </div>
+  </header>
 
-      <a class="nav-cta" href="contact.html">Demander un devis</a>
-    </nav>
-    <label for="nav-toggle" class="burger" aria-label="Ouvrir le menu">
-      <span></span><span></span><span></span>
-    </label>
+  <div class="page-banner">
+    <div class="wrap">
+      <h1>Réalisations</h1>
+      <p>Un aperçu des chantiers menés dans le Gers, en photos au fil des interventions.</p>
+    </div>
   </div>
-</header>
-<div class="page-banner">
-  <div class="wrap">
-    <h1>Réalisations</h1>
-    <p>Un aperçu des chantiers menés dans le Gers, en photos au fil des interventions.</p>
-  </div>
-</div>
 
-<section class="savoir-faire-section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Savoir-faire</span>
-      <h2>Sculpture bas-relief — création d'une console de cheminée</h2>
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Atelier &amp; chantier</span>
+        <h2>Des projets d’intérieur avec le souci du détail</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <img src="images/fondelin-05-rosace-restauree.jpg" alt="Rosace restaurée" loading="lazy">
+          <div class="feature-body"><span class="feature-tag">Restauration</span><h3>Rosace de plafond</h3><p>Relevé, moulage et repose d’une rosace en plâtre décoratif.</p></div>
+        </article>
+        <article class="feature-card">
+          <img src="images/labarthe-staff-01-moulures-atelier.jpg" alt="Moulures en staff" loading="lazy">
+          <div class="feature-body"><span class="feature-tag">Sur mesure</span><h3>Fabrication de moulures</h3><p>Création de corniches et frises en staff pour des pièces anciennes.</p></div>
+        </article>
+        <article class="feature-card">
+          <img src="images/isolation-05-vue-ensemble.jpg" alt="Isolation de plafond" loading="lazy">
+          <div class="feature-body"><span class="feature-tag">Isolation</span><h3>Plafond sous charpente</h3><p>Habillage et isolation thermique d’un plafond incliné et de volume.</p></div>
+        </article>
+      </div>
     </div>
-    <div class="savoir-faire-intro">
-      <span class="badge-exercice">Pièce d'exercice — hors chantier client</span>
-      <p>Une console de cheminée entièrement sculptée à la main, réalisée pour entretenir et démontrer le geste de la <strong>sculpture bas-relief</strong> : cartouche à coquille, motifs floraux et volutes travaillés au ciseau, dans la continuité de la formation de plâtrier-staffeur. Ce même geste se retrouve dans la restauration de moulures et de rosaces d'origine présentée plus bas.</p>
-    </div>
-    <div class="real-grid">
-      <div class="real-card">
-  <div class="real-visual"><img src="images/sculpture-console-01-cartouche.jpg" alt="Cartouche central sculpté en bas-relief, motif coquille et volutes" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Sculpture</span><span>Détail</span></div>
-    <h3>Cartouche à coquille</h3>
-    <p>Motif central en bas-relief, coquille et volutes travaillées au ciseau.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/sculpture-console-02-pilastre.jpg" alt="Pilastre sculpté avec motifs floraux en bas-relief" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Sculpture</span><span>Détail</span></div>
-    <h3>Pilastre à motifs floraux</h3>
-    <p>Frise florale sculptée sur toute la hauteur du pilastre.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/sculpture-console-05-corniche.jpg" alt="Corniche sculptée avec cartouche central et volutes latérales" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Sculpture</span><span>Vue d'ensemble</span></div>
-    <h3>Corniche complète</h3>
-    <p>La corniche sculptée dans son ensemble, avant assemblage.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/sculpture-plaque-lieu-dit.jpg" alt="Plaque de lieu-dit sculptée en bas-relief, motifs floraux" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Sculpture</span><span>Plaque murale</span></div>
-    <h3>Plaque de lieu-dit</h3>
-    <p>Plaque décorative sculptée à la main, motifs floraux et cartouche fleuri.</p>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Château de Fondelin — plâtrerie décorative</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Restauration d'une rosace de plafond et de sa corniche moulurée d'origine : <strong>dépose et relevé de l'existant, façonnage du profil en atelier, moulage de la corniche puis repose de la rosace</strong> restaurée. Un travail de plâtrerie décorative traditionnelle, mené avec le même soin que sur un chantier de second œuvre courant.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/fondelin-05-rosace-restauree.jpg" alt="Rosace de plafond restaurée, motif floral et feuillages" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>La rosace restaurée, motifs floraux d'origine</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/fondelin-01-avant-depose.jpg" alt="Rosace d'origine avant restauration, plâtre dégradé autour" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — État initial</span><h4>Dépose et relevé de l'existant</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/fondelin-02-faconnage-atelier.jpg" alt="Façonnage du profil de corniche à l'atelier" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — Atelier</span><h4>Façonnage du profil</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/fondelin-03-corniche-moulee.jpg" alt="Corniche moulurée après moulage, profil courbe" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Moulage</span><h4>Corniche moulée sur mesure</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/fondelin-04-pose-rosace.jpg" alt="Pose de la rosace restaurée au plafond" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Pose</span><h4>Repose de la rosace au plafond</h4></div>
+  <section>
+    <div class="wrap">
+      <div class="project-block">
+        <div class="project-head"><h3>Chantiers décoratifs et de restauration</h3><span>Gers • 2024-2026</span></div>
+        <div class="gallery-grid">
+          <figure class="gallery-item"><img src="images/lanne-salon-05-cheminee-caissons.jpg" alt="Plafond à caissons et cheminée" loading="lazy"><div class="caption">Plafond et cheminée</div></figure>
+          <figure class="gallery-item"><img src="images/sculpture-console-01-cartouche.jpg" alt="Console sculptée" loading="lazy"><div class="caption">Console sculptée</div></figure>
+          <figure class="gallery-item"><img src="images/sejour-04-vue-ensemble.jpg" alt="Séjour rénové" loading="lazy"><div class="caption">Séjour rénové</div></figure>
+          <figure class="gallery-item"><img src="images/feuguarole-05-corniche-restauree.jpg" alt="Corniche restaurée" loading="lazy"><div class="caption">Corniche restaurée</div></figure>
+          <figure class="gallery-item"><img src="images/frise-05-plafond-restaure.jpg" alt="Plafond restauré" loading="lazy"><div class="caption">Plafond restauré</div></figure>
+          <figure class="gallery-item"><img src="images/couloir-corniche-05-couloir-fini.jpg" alt="Couloir fini" loading="lazy"><div class="caption">Couloir fini</div></figure>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Feuguarole — plâtre staffé, corniches d'origine</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Reprise d'une corniche en plâtre staffé endommagée : <strong>relevé et moulage du profil en atelier, pose sur échafaudage, raccords et finitions</strong> jusqu'à retrouver une corniche continue tout autour de la pièce, autour des portes et jusqu'à la rosace de plafond. Un travail long et minutieux, fidèle au profil d'origine.</p>
-    </div>
-    <div class="feature-grid reverse">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-05-corniche-restauree.jpg" alt="Corniche en plâtre staffé restaurée, angle de pièce avec fenêtre" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Corniche restaurée, angle de la pièce</h4></div>
-        </div>
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Réalisations</span>
+        <h2>Suite du parcourt de chantier</h2>
       </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-01-corniche-degradee.jpg" alt="Section de corniche endommagée avant restauration" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — État initial</span><h4>Corniche dégradée à reprendre</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-02-moulage-atelier.jpg" alt="Moulage du profil de corniche à l'atelier" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — Atelier</span><h4>Moulage du profil sur mesure</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-03-pose-echafaudage.jpg" alt="Pose de la corniche sur échafaudage" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Pose</span><h4>Pose sur échafaudage</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-04-raccord-plafond.jpg" alt="Raccord de la corniche restaurée avec le plafond existant" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Finition</span><h4>Raccords et finitions</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-06-facon-atelier.jpg" alt="Façonnage du profil de corniche en atelier, entretoises de maintien" loading="lazy">
-          <div class="feature-cap"><span class="step">05 — Atelier</span><h4>Façonnage du profil en atelier</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-07-profils-empiles.jpg" alt="Profils de corniche façonnés, empilés en atelier avant pose" loading="lazy">
-          <div class="feature-cap"><span class="step">06 — Atelier</span><h4>Profils façonnés, prêts pour la pose</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-08-rosace-corniche.jpg" alt="Corniche en cours de pose, rosace de plafond visible dans l'angle" loading="lazy">
-          <div class="feature-cap"><span class="step">07 — Pose</span><h4>Corniche posée jusqu'à la rosace</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-09-finition-cadre-porte.jpg" alt="Finition verticale de la corniche le long d'un cadre de porte" loading="lazy">
-          <div class="feature-cap"><span class="step">08 — Finition</span><h4>Finition le long d'un cadre de porte</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-10-profil-entretoise.jpg" alt="Profil de corniche façonné, maintenu par une entretoise en atelier" loading="lazy">
-          <div class="feature-cap"><span class="step">09 — Atelier</span><h4>Profil maintenu par une entretoise</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-11-corniche-rosace-angle.jpg" alt="Corniche posée avec rosace de plafond visible en angle de pièce" loading="lazy">
-          <div class="feature-cap"><span class="step">10 — Pose</span><h4>Corniche et rosace en angle de pièce</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-12-corniche-avant-recoupe.jpg" alt="Corniche d'origine avant recoupe et raccord" loading="lazy">
-          <div class="feature-cap"><span class="step">11 — État initial</span><h4>Corniche d'origine avant reprise</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-13-corniche-vue-longue.jpg" alt="Vue en enfilade de la corniche restaurée le long du plafond" loading="lazy">
-          <div class="feature-cap"><span class="step">12 — Pose</span><h4>Vue en enfilade de la corniche</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-14-raccord-teinte.jpg" alt="Raccord de teinte entre corniche restaurée et corniche d'origine" loading="lazy">
-          <div class="feature-cap"><span class="step">13 — Finition</span><h4>Raccord de teinte avec l'existant</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-15-detail-profil-fini.jpg" alt="Détail du profil mouluré de la corniche restaurée" loading="lazy">
-          <div class="feature-cap"><span class="step">14 — Détail</span><h4>Détail du profil restauré</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/feuguarole-16-corniche-continue.jpg" alt="Corniche continue restaurée sur toute la longueur du plafond" loading="lazy">
-          <div class="feature-cap"><span class="step">15 — Résultat</span><h4>Corniche continue sur toute la pièce</h4></div>
-        </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item"><img src="images/sdb-04-douche-italienne.jpg" alt="Douche italienne" loading="lazy"><div class="caption">Douche italienne</div></figure>
+        <figure class="gallery-item"><img src="images/maison-04-cuisine.jpg" alt="Cuisine intérieure" loading="lazy"><div class="caption">Cuisine &amp; finition</div></figure>
+        <figure class="gallery-item"><img src="images/labarthe-corniche-05-plafond-fini.jpg" alt="Corniche posée" loading="lazy"><div class="caption">Corniche posée</div></figure>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Plafond à frise et moulures — reprise de plâtre</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Restauration d'un plafond endommagé le long d'une frise en bois mouluré d'origine et d'une rosace centrale : <strong>relevé des zones dégradées, reprise du plâtre en corniche puis raccord et lissage du plafond</strong> jusqu'à retrouver une surface plane, fidèle au niveau d'origine contre la frise.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/frise-05-plafond-restaure.jpg" alt="Plafond restauré, raccord lisse contre la frise en bois" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Plafond restauré, raccord contre la frise</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/frise-01-angle-degrade.jpg" alt="Angle de plafond endommagé le long de la frise en bois doré" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — État initial</span><h4>Plâtre endommagé le long de la frise</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/frise-02-rosace-degradee.jpg" alt="Rosace centrale endommagée, plâtre manquant autour" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — État initial</span><h4>Rosace centrale à restaurer</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/frise-03-reprise-detail.jpg" alt="Détail de la reprise de plâtre en angle contre la frise" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Reprise</span><h4>Reprise de plâtre en angle</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/frise-04-plafond-en-cours.jpg" alt="Application du plâtre frais en corniche, travail en cours" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — En cours</span><h4>Application du plâtre en corniche</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Labarthe — fabrication des moulures en staff</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Fabrication sur mesure de moulures en staff destinées à une corniche de plafond : <strong>façonnage en atelier, démoulage puis séchage</strong> avant transport et pose sur le chantier.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-staff-01-moulures-atelier.jpg" alt="Moulures en staff façonnées en atelier, posées sur tréteaux" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — Atelier</span><h4>Façonnage des moulures en atelier</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-staff-02-moule-staff.jpg" alt="Moule de staff après démoulage d'une moulure" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — Démoulage</span><h4>Démoulage d'une moulure</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-staff-03-sechage-exterieur.jpg" alt="Moulures en staff en cours de séchage à l'extérieur" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Séchage</span><h4>Séchage des pièces à l'air libre</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-staff-04-mesure-exterieur.jpg" alt="Prise de mesure sur les moulures avant transport" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Contrôle</span><h4>Vérification avant transport</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-staff-05-maison.jpg" alt="Façade de la propriété où les moulures seront posées" loading="lazy">
-          <div class="feature-cap"><span class="step">05 — Chantier</span><h4>La propriété où seront posées les moulures</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Labarthe — pose d'une corniche en plâtre</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Pose d'une corniche moulurée en plâtre au plafond d'une pièce, de l'ossature jusqu'aux finitions d'angle : <strong>préparation du support, pose de la corniche, raccords et reprises</strong> jusqu'à un plafond fini.</p>
-    </div>
-    <div class="feature-grid reverse">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-corniche-05-plafond-fini.jpg" alt="Plafond avec corniche posée, prêt pour la finition" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Plafond avec corniche posée</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-corniche-01-ossature.jpg" alt="Ossature de plafond avant pose de la corniche" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — Support</span><h4>Préparation de l'ossature</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-corniche-02-pose-en-cours.jpg" alt="Pose de la corniche en cours le long du plafond" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — Pose</span><h4>Pose de la corniche</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-corniche-03-raccord-angle.jpg" alt="Raccord d'angle de la corniche au plafond" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Raccord</span><h4>Raccord d'angle</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/labarthe-corniche-04-finition-angle.jpg" alt="Finition d'un second angle de la corniche" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Finition</span><h4>Finition des angles</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Condom — corniche en plâtre, couloir à pilier</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Reprise d'une corniche en plâtre le long d'un couloir marqué par un pilier d'angle : <strong>préparation du plafond, pose et raccords de la corniche, finitions au pilier</strong> jusqu'à un ensemble continu sur toute la longueur du couloir.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/couloir-corniche-05-couloir-fini.jpg" alt="Couloir avec corniche en plâtre terminée, pilier d'angle" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Le couloir avec sa corniche terminée</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/couloir-corniche-01-avant.jpg" alt="Plafond de couloir avant reprise, zones à traiter visibles" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — État initial</span><h4>Plafond du couloir avant reprise</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/couloir-corniche-02-en-cours.jpg" alt="Pose de la corniche en cours près du pilier" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — Pose</span><h4>Pose de la corniche près du pilier</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/couloir-corniche-03-angle-joint.jpg" alt="Raccord et jointoiement d'un angle de corniche" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Raccord</span><h4>Jointoiement d'un angle</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/couloir-corniche-04-detail-pilier.jpg" alt="Détail de la corniche au niveau du pilier d'angle" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Détail</span><h4>Finition au niveau du pilier</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Isolation — plafond sous charpente</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Isolation et habillage d'un plafond rampant sous charpente apparente, contre un mur en briques : <strong>pose de l'isolant entre chevrons, habillage en plaques de plâtre puis finitions</strong> jusqu'à un plafond incliné fini, poutres et vue dégagée conservées.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/isolation-05-vue-ensemble.jpg" alt="Plafond incliné isolé et habillé, poutres apparentes, vue sur l'extérieur" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Plafond incliné fini, poutres conservées</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/isolation-01-avant-charpente.jpg" alt="Charpente apparente avant isolation, échafaudage en place" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — État initial</span><h4>Charpente apparente avant isolation</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/isolation-02-pose-isolant.jpg" alt="Pose de l'isolant entre les chevrons de la charpente" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — Isolation</span><h4>Pose de l'isolant entre chevrons</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/isolation-03-placo-angle-brique.jpg" alt="Habillage en plaques de plâtre contre un mur en briques" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Habillage</span><h4>Habillage en plaques contre le mur en briques</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/isolation-04-plafond-incline.jpg" alt="Plafond rampant habillé, poutre apparente et grande baie vitrée" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Finition</span><h4>Plafond rampant habillé</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de rénovation</span>
-      <h2>Rénovation d'un séjour — plâtrerie complète</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Reprise complète des plafonds et cloisons d'un séjour ouvert, avec création d'une ouverture entre pièces : <strong>dépose de l'existant, reprise des plafonds, ouverture structurelle et finitions</strong> jusqu'à un espace de vie unifié.</p>
-    </div>
-    <div class="feature-grid reverse">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sejour-04-vue-ensemble.jpg" alt="Séjour rénové, plafond et cloisons finis, ouverture entre pièces" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Le séjour après reprise complète</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sejour-01-avant-plafond.jpg" alt="Plafond avant reprise, point électrique apparent" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — État initial</span><h4>Plafond avant reprise</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sejour-02-ouverture-cours.jpg" alt="Création d'une ouverture structurelle entre les pièces" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — En cours</span><h4>Ouverture structurelle en cours</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sejour-03-joints-plafond.jpg" alt="Traitement des joints du plafond après pose des plaques" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Finition</span><h4>Traitement des joints de plafond</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sejour-05-couloir-fini.jpg" alt="Couloir attenant, plafond et murs finis" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Résultat</span><h4>Le couloir attenant, fini</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de rénovation</span>
-      <h2>Rénovation d'une salle de bain — plomberie, carrelage, douche à l'italienne</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Rénovation complète d'une salle de bain : <strong>reprise de la plomberie, chape et carrelage mural, pose d'une douche à l'italienne</strong> puis installation du meuble vasque, pour un ensemble net et actuel.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sdb-05-meuble-vasque.jpg" alt="Salle de bain rénovée, meuble vasque suspendu et carrelage mural texturé" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Meuble vasque et carrelage mural finis</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sdb-01-plomberie-avant.jpg" alt="Réseaux de plomberie avant chape, alimentation et évacuation" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — Plomberie</span><h4>Reprise de l'alimentation et de l'évacuation</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sdb-02-chape-carrelage-mur.jpg" alt="Chape et carrelage mural en cours de pose" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — Chape</span><h4>Chape et carrelage mural en cours</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sdb-03-pose-carrelage-sol.jpg" alt="Pose du carrelage au sol, contrôle au niveau" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Carrelage sol</span><h4>Pose et contrôle du carrelage au sol</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/sdb-04-douche-italienne.jpg" alt="Douche à l'italienne finie, carrelage mural et pente vers la bonde" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Douche</span><h4>Douche à l'italienne terminée</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de restauration</span>
-      <h2>Lanne (Fourcès) — salon à plafond à caissons</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Restauration complète d'un grand salon avec plafond à caissons et cheminée monumentale en pierre : <strong>reprise du plafond à caissons, des cloisons et des encadrements</strong>, dans le respect des volumes et proportions d'origine.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-salon-05-cheminee-caissons.jpg" alt="Grand salon restauré, plafond à caissons et cheminée en pierre" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Le salon restauré, cheminée et plafond à caissons</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-salon-01-avant.jpg" alt="Angle de plafond avant restauration" loading="lazy">
-          <div class="feature-cap"><span class="step">01 — État initial</span><h4>Plafond avant restauration</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-salon-02-en-cours.jpg" alt="Pièce en cours de reprise, matériaux au sol" loading="lazy">
-          <div class="feature-cap"><span class="step">02 — En cours</span><h4>Reprise en cours</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-salon-03-caissons-detail.jpg" alt="Détail du plafond à caissons restauré" loading="lazy">
-          <div class="feature-cap"><span class="step">03 — Détail</span><h4>Détail du plafond à caissons</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-salon-04-couloir-caissons.jpg" alt="Couloir attenant avec plafond à caissons" loading="lazy">
-          <div class="feature-cap"><span class="step">04 — Couloir</span><h4>Couloir attenant, même traitement</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-project">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Chantier de rénovation</span>
-      <h2>Lanne (Fourcès) — carrelage salle de douche</h2>
-    </div>
-    <div class="feature-intro">
-      <p>Rénovation d'une salle de douche : <strong>pose de carrelage mural grand format et installation d'une paroi de douche vitrée</strong>, pour une finition nette et lumineuse.</p>
-    </div>
-    <div class="feature-grid reverse">
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-douche-02-carrelage-mur.jpg" alt="Carrelage mural de la douche, reflets de lumière" loading="lazy">
-          <div class="feature-cap"><span class="step">Résultat</span><h4>Carrelage mural fini</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-douche-01-paroi-verre.jpg" alt="Paroi de douche vitrée et carrelage mural" loading="lazy">
-          <div class="feature-cap"><span class="step">01</span><h4>Paroi de douche vitrée</h4></div>
-        </div>
-      </div>
-      <div class="fg-item">
-        <div class="feature-visual">
-          <img src="images/lanne-douche-03-angle-carrelage.jpg" alt="Angle de carrelage mural dans la douche" loading="lazy">
-          <div class="feature-cap"><span class="step">02</span><h4>Angle de carrelage</h4></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-subhead" style="margin-top:0; padding-top:40px;">Chantier récent — Plâtrerie / Placo</div>
-    <div class="real-grid">
-      <div class="real-card">
-  <div class="real-visual"><img src="images/placo-01-angle-plafond.jpg" alt="Finition d'angle plâtrerie, plafond et corniche" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Plâtrerie</span><span>Chantier récent</span></div>
-    <h3>Reprise d'angle et de corniche</h3>
-    <p>Finition soignée des angles et de la corniche après pose, avant mise en peinture.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/placo-02-plaques-cloison.jpg" alt="Pose de plaques de placo sur ossature" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Placo</span><span>Chantier récent</span></div>
-    <h3>Pose de plaques sur ossature</h3>
-    <p>Habillage d'une cloison en plaques de plâtre, prêt pour le traitement des joints.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/placo-03-plafond-jonctions.jpg" alt="Traitement des joints et fixations au plafond" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Plâtrerie</span><span>Chantier récent</span></div>
-    <h3>Traitement des joints de plafond</h3>
-    <p>Rebouchage des points de fixation et jonctions avant ponçage et finition.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/placo-04-enduit-jointoiement.jpg" alt="Application d'enduit de jointoiement sur plaque" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Placo</span><span>Chantier récent</span></div>
-    <h3>Enduit de jointoiement</h3>
-    <p>Application de l'enduit sur les joints entre plaques, étape clé avant ponçage.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/plafond-traditionnel-01-sejour.jpg" alt="Plafond en plâtre traditionnel lisse, séjour lumineux avec baie vitrée" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Plâtre traditionnel</span><span>Chantier récent</span></div>
-    <h3>Plafond en plâtre traditionnel</h3>
-    <p>Plafond lissé au plâtre traditionnel dans un séjour ouvert sur terrasse.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/plafond-traditionnel-02-piece-lumineuse.jpg" alt="Plafond en plâtre traditionnel, pièce lumineuse avec porte cintrée" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Plâtre traditionnel</span><span>Chantier récent</span></div>
-    <h3>Finition lisse au plâtre</h3>
-    <p>Plafond fini au plâtre traditionnel, sans joint apparent.</p>
-  </div>
-</div>
-      <div class="real-card">
-  <div class="real-visual"><img src="images/plafond-traditionnel-03-piece.jpg" alt="Plafond en plâtre traditionnel, séjour avec baie coulissante" loading="lazy"></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Plâtre traditionnel</span><span>Chantier récent</span></div>
-    <h3>Plafond lisse, séjour lumineux</h3>
-    <p>Autre vue du plafond en plâtre traditionnel, sans joint apparent.</p>
-  </div>
-</div>
-    </div>
-
-    <div class="section-subhead">Nos savoir-faire, par métier</div>
-    <div class="real-grid">
-      <div class="real-card">
-  <div class="real-visual"><svg viewBox="0 0 220 150" width="100%" height="150" role="img" aria-label="Application de peinture">
-          <rect x="10" y="10" width="200" height="130" fill="#EDE3CC"/>
-          <rect x="10" y="10" width="130" height="130" fill="#BE5A2E" opacity=".9"/>
-          <rect x="128" y="10" width="14" height="130" fill="#8A3D1D"/>
-        </svg></div>
-  <div class="real-body">
-    <div class="real-tags"><span>Peinture</span><span>Fourcès</span></div>
-    <h3>Rafraîchissement intérieur</h3>
-    <p>Préparation des murs et mise en peinture de l'ensemble des pièces à vivre.</p>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
-
-<div class="cta-band">
-  <div class="wrap">
-    <div>
-      <h2>Votre projet pourrait être le prochain</h2>
-      <p>Parlons de votre chantier, où qu'il en soit.</p>
-    </div>
-    <div class="ctas">
-      <a class="btn btn-primary" href="contact.html">Demander un devis</a>
-      <a class="btn btn-ghost-light mono" href="tel:0648061892">06 48 06 18 92</a>
-    </div>
-  </div>
-</div>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
+  <div class="cta-band">
+    <div class="wrap">
       <div>
-        <h4>Pellegrino Rénovation</h4>
-        <p>Entreprise individuelle de second œuvre — plâtrerie, isolation, carrelage et peinture.<br>Basée à Condom, intervient dans tout le Gers.</p>
+        <h2>Un projet de rénovation ?<br>Parlons-en.</h2>
+        <p>Déplacement et devis gratuits dans tout le Gers.</p>
       </div>
-      <div>
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html">Prestations</a></li>
-          <li><a href="realisations.html">Réalisations</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="ctas">
+        <a class="btn btn-primary" href="contact.html">Demander un devis</a>
+        <a class="btn btn-ghost-light mono" href="tel:0648061892">06 48 06 18 92</a>
       </div>
-      <div>
-        <h4>Coordonnées</h4>
-        <ul>
-          <li>9 rue Grichet, 32100 Condom</li>
-          <li class="mono">06 48 06 18 92</li>
-          <li>SIRET 421 291 006 00029</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Pellegrino Rénovation — EI, TVA non applicable, art. 293 B du CGI</span>
-      <span>Site conçu pour un artisan du Gers</span>
     </div>
   </div>
-</footer>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Pellegrino Rénovation</h4>
+          <p>Entreprise individuelle de second œuvre — plâtrerie, isolation, carrelage et peinture.<br>Basée à Condom, intervient dans tout le Gers.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Prestations</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Coordonnées</h4>
+          <ul>
+            <li>9 rue Grichet, 32100 Condom</li>
+            <li class="mono">06 48 06 18 92</li>
+            <li>SIRET 421 291 006 00029</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Pellegrino Rénovation — EI, TVA non applicable</span><span>Site conçu pour un artisan du Gers</span></div>
+    </div>
+  </footer>
 </body>
 </html>
