@@ -75,7 +75,7 @@
     .nav-toggle{display:none;}
     .burger{display:none;}
     @media (max-width:860px){
-      .nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38,42,.08); opacity:0; pointer-events:none; transform:translateY(-8px); transition:opacity .2s ease, transform .2s ease;}
+      .nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38,42,.08); opacity:0; pointer-events:none; transform:translateY(-20px); transition:all .2s ease;}
       .nav-toggle:checked ~ .nav-links{opacity:1; pointer-events:auto; transform:translateY(0);}
       .nav-links a{width:100%; padding:14px 0; border-bottom:1px solid rgba(36,38,42,.08);}
       .nav-links .nav-cta{width:100%; margin-top:12px; text-align:center; border-bottom:none;}
@@ -87,7 +87,7 @@
     }
     .hero{padding:76px 0 64px;}
     .hero-inner{display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center;}
-    .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:"IBM Plex Mono", monospace; font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark); margin-bottom:18px;}
+    .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:"IBM Plex Mono", monospace; font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark);}
     .eyebrow::before{content:""; width:20px; height:1px; background:var(--terre-cuite-dark); display:block;}
     .hero h1{font-size:clamp(2.5rem, 5vw, 4rem); max-width:12ch; margin-bottom:22px;}
     .hero h1 em{font-style:italic; color:var(--terre-cuite-dark);}
@@ -95,7 +95,7 @@
     .hero-ctas{display:flex; flex-wrap:wrap; gap:14px;}
     .crosssection-card{background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; box-shadow:var(--ombre); padding:26px 22px 20px;}
     .crosssection-card svg{width:100%; height:220px; display:block; border-radius:4px; background:linear-gradient(180deg, #F1F0EE, #E7E3DA);}
-    .crosssection-card .cap{display:flex; justify-content:space-between; align-items:baseline; font-family:"IBM Plex Mono", monospace; font-size:.7rem; letter-spacing:.06em; color:var(--ardoise-soft); border-top:1px dashed var(--pierre-light); margin-top:14px; padding-top:12px;}
+    .crosssection-card .cap{display:flex; justify-content:space-between; align-items:baseline; font-family:"IBM Plex Mono", monospace; font-size:.7rem; letter-spacing:.06em; color:var(--ardoise-soft);}
     .strip{border-top:1px solid rgba(36,38,42,.1); border-bottom:1px solid rgba(36,38,42,.1); background:var(--chaux-warm);}
     .strip-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);}
     .strip-item{padding:22px 28px; border-right:1px solid rgba(36,38,42,.1);}
@@ -131,6 +131,10 @@
     .quote-inner h2{font-size:1.6rem; margin-bottom:14px;}
     .quote-inner p{color:var(--ardoise-soft); margin-bottom:10px;}
     .quote-source{font-family:"IBM Plex Mono", monospace; font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--ardoise-soft);}
+    .project-github{padding:44px 0;}
+    .project-box{background:var(--blanc); border:1px solid rgba(36,38,42,.08); box-shadow:var(--ombre); padding:32px 28px; border-radius:8px; max-width:640px;}
+    .project-box h3{margin:0 0 12px; font-size:clamp(1.4rem, 2vw, 1.8rem);}
+    .project-box p{color:var(--ardoise-soft); margin-bottom:18px;}
     .cta-band{background:var(--ardoise); color:var(--blanc); padding:64px 0;}
     .cta-band .wrap{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
     .cta-band h2{color:var(--blanc); font-size:clamp(1.8rem,3vw,2.4rem); max-width:16ch;}
@@ -141,7 +145,7 @@
     .footer-grid h4{margin-bottom:14px; font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ardoise-soft);}
     .footer-grid p, .footer-grid li{color:var(--ardoise-soft); font-size:.93rem;}
     .footer-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;}
-    .footer-bottom{border-top:1px solid rgba(36,38,42,.12); padding-top:18px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:"IBM Plex Mono", monospace; font-size:.72rem; color:var(--ardoise-soft);}
+    .footer-bottom{border-top:1px solid rgba(36,38,42,.12); padding-top:18px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:"IBM Plex Mono", monospace; font-size:.7rem; letter-spacing:.06em; color:var(--ardoise-soft);}
     @media (max-width:980px){
       .hero-inner{grid-template-columns:1fr;}
       .gallery-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
@@ -219,7 +223,7 @@
       <div class="section-head">
         <span class="eyebrow">Nos savoir-faire</span>
         <h2>Une rénovation complète, sans multiplier les artisans</h2>
-        <p>Du gros œuvre intérieur aux finitions, chaque prestation est pensée pour s’articuler avec les autres — un seul chantier, une seule équipe.</p>
+        <p>Du gros œuvre intérieur aux finitions, chaque prestation est pensée pour s'articuler avec les autres — un seul chantier, une seule équipe.</p>
       </div>
       <div class="metier-grid">
         <a class="metier-card" href="services.html#platrerie">
@@ -263,14 +267,14 @@
         <h2>Quelques chantiers et finitions réalisées</h2>
       </div>
       <div class="gallery-grid">
-        <figure class="gallery-card large"><img src="images/lanne-salon-05-cheminee-caissons.jpg" alt="Salon rénové avec plafond à caissons et cheminée" loading="lazy"><figcaption>Plafond à caissons — Lanne</figcaption></figure>
+        <figure class="gallery-card large"><img src="images/lanne-salon-05-cheminee-caissons.jpg" alt="Salon rénové avec plafond à caissons et cheminée" loading="lazy"><figcaption>Plafond à caissons</figcaption></figure>
         <figure class="gallery-card"><img src="images/isolation-05-vue-ensemble.jpg" alt="Isolation sous charpente et habillage de plafond" loading="lazy"><figcaption>Isolation sous charpente</figcaption></figure>
         <figure class="gallery-card"><img src="images/sdb-04-douche-italienne.jpg" alt="Salle de bain avec douche italienne" loading="lazy"><figcaption>Douche italienne</figcaption></figure>
         <figure class="gallery-card"><img src="images/sejour-04-vue-ensemble.jpg" alt="Séjour rénové" loading="lazy"><figcaption>Rénovation de séjour</figcaption></figure>
         <figure class="gallery-card"><img src="images/fondelin-05-rosace-restauree.jpg" alt="Restauration d'une rosace en plâtre" loading="lazy"><figcaption>Restauration de rosace</figcaption></figure>
         <figure class="gallery-card"><img src="images/sculpture-console-01-cartouche.jpg" alt="Console sculptée en plâtre" loading="lazy"><figcaption>Console sculptée</figcaption></figure>
         <figure class="gallery-card"><img src="images/labarthe-staff-01-moulures-atelier.jpg" alt="Fabrication de moulures en plâtre en atelier" loading="lazy"><figcaption>Moulures sur mesure</figcaption></figure>
-        <figure class="gallery-card"><img src="images/maison-04-cuisine.jpg" alt="Travail de finition et d’habillage dans une cuisine" loading="lazy"><figcaption>Finition intérieure</figcaption></figure>
+        <figure class="gallery-card"><img src="images/maison-04-cuisine.jpg" alt="Travail de finition et d'habillage dans une cuisine" loading="lazy"><figcaption>Finition intérieure</figcaption></figure>
       </div>
     </div>
   </section>
@@ -283,7 +287,7 @@
       </div>
       <div class="why-grid">
         <div class="why-item"><span class="tag">Expertise</span><h3>Un savoir-faire maîtrisé</h3><p>Plâtrerie, moulures, faux plafonds et finitions : chaque étape est pensée avec soin.</p></div>
-        <div class="why-item"><span class="tag">Sur mesure</span><h3>Des créations adaptées</h3><p>Chaque profil est imaginé pour s’intégrer à votre espace et à votre architecture.</p></div>
+        <div class="why-item"><span class="tag">Sur mesure</span><h3>Des créations adaptées</h3><p>Chaque profil est imaginé pour s'intégrer à votre espace et à votre architecture.</p></div>
         <div class="why-item"><span class="tag">Fiabilité</span><h3>Un chantier propre et soigné</h3><p>Des travaux réalisés dans le respect des normes, avec une finition durable et élégante.</p></div>
       </div>
     </div>
@@ -291,13 +295,26 @@
 
   <section class="quote-section">
     <div class="quote-inner">
-      <span class="quote-mark">“</span>
+      <span class="quote-mark">"</span>
       <div>
         <span class="eyebrow">Presse</span>
         <h2>Portrait dans La Dépêche du Dimanche</h2>
         <p>Formé à la tradition artisanale, Eric Pellegrino a développé un savoir-faire rare dans le second œuvre : la plâtrerie, les moulures et les finitions décoratives.</p>
-        <p>Son approche repose sur le goût du détail, la précision de l’exécution et un travail soigné sur mesure.</p>
+        <p>Son approche repose sur le goût du détail, la précision de l'exécution et un travail soigné sur mesure.</p>
         <div class="quote-source">La Dépêche du Dimanche — édition Condom Armagnac</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-github">
+    <div class="wrap">
+      <div class="project-box">
+        <span class="eyebrow">Projet GitHub</span>
+        <h3>Pellegrino B8C0B2 Renovation</h3>
+        <p>Suivi du projet de rénovation et des fichiers associés.</p>
+        <a class="btn btn-primary" href="https://github.com/PELLEGRINO132/pellegrino-b8c0b2renovation" target="_blank" rel="noopener noreferrer">
+          Voir le dépôt
+        </a>
       </div>
     </div>
   </section>
