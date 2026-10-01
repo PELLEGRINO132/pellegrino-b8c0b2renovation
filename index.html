@@ -75,7 +75,7 @@
     .nav-toggle{display:none;}
     .burger{display:none;}
     @media (max-width:860px){
-      .nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38[...]
+      .nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38,42,.08); opacity:0; pointer-events:none; transform:translateY(-8px); transition:opacity .18s ease, transform .18s ease;}
       .nav-toggle:checked ~ .nav-links{opacity:1; pointer-events:auto; transform:translateY(0);}
       .nav-links a{width:100%; padding:14px 0; border-bottom:1px solid rgba(36,38,42,.08);}
       .nav-links .nav-cta{width:100%; margin-top:12px; text-align:center; border-bottom:none;}
@@ -121,9 +121,6 @@
     .gallery-card img{width:100%; height:260px; object-fit:cover; display:block;}
     .gallery-card.large img{height:420px;}
     .gallery-card figcaption{padding:12px 14px 16px; font-family:"IBM Plex Mono", monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ardoise-soft);}
-    .gallery-link-box{background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; box-shadow:var(--ombre); padding:28px; text-align:center; margin-top:24px;}
-    .gallery-link-box h4{font-size:1rem; margin-bottom:8px; color:var(--ardoise);}
-    .gallery-link-box p{color:var(--ardoise-soft); font-size:.95rem; margin-bottom:16px;}
     .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
     .why-item .tag{display:block; margin-bottom:10px; font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--terre-cuite-dark);}
     .why-item h3{font-size:1.14rem; margin-bottom:10px;}
@@ -278,13 +275,6 @@
         <figure class="gallery-card"><img src="images/sculpture-console-01-cartouche.jpg" alt="Console sculptée en plâtre" loading="lazy"><figcaption>Console sculptée</figcaption></figure>
         <figure class="gallery-card"><img src="images/labarthe-staff-01-moulures-atelier.jpg" alt="Fabrication de moulures en plâtre en atelier" loading="lazy"><figcaption>Moulures sur mesure</figcaption></figure>
         <figure class="gallery-card"><img src="images/maison-04-cuisine.jpg" alt="Travail de finition et d'habillage dans une cuisine" loading="lazy"><figcaption>Finition intérieure</figcaption></figure>
-      </div>
-      <div class="gallery-link-box">
-        <h4>Album photo complet</h4>
-        <p>Découvrez l'ensemble de nos réalisations et projets en cours.</p>
-        <a class="btn btn-primary" href="https://photos.app.goo.gl/oDGRQa57vA5d79eFA" target="_blank" rel="noopener noreferrer">
-          Voir l'album Google Photos
-        </a>
       </div>
     </div>
   </section>
