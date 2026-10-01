@@ -269,6 +269,44 @@ section{padding:84px 0;}
 }
 @media (max-width:560px){.metier-grid{grid-template-columns:1fr;}}
 
+.gallery-section{padding-top:8px;}
+.gallery-grid{
+  display:grid; grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:18px;
+}
+.gallery-card{
+  background:var(--blanc);
+  border:1px solid rgba(36,38,42,.08);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:var(--ombre);
+}
+.gallery-card.large{grid-column:span 2;}
+.gallery-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+.gallery-card.large img{height:420px;}
+.gallery-card figcaption{
+  padding:12px 14px 16px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--ardoise-soft);
+}
+@media (max-width:760px){
+  .gallery-grid{grid-template-columns:repeat(2, minmax(0, 1fr));}
+  .gallery-card.large{grid-column:span 2;}
+}
+@media (max-width:560px){
+  .gallery-grid{grid-template-columns:1fr;}
+  .gallery-card.large{grid-column:auto;}
+  .gallery-card img, .gallery-card.large img{height:260px;}
+}
+
 /* pourquoi */
 .pourquoi-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:40px;
@@ -501,10 +539,9 @@ button[disabled]{opacity:.6; cursor:not-allowed;}
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <nav class="nav-links">
       <a class="nav-links-item active" href="index.html">Accueil</a>
-<a class="nav-links-item" href="services.html">Prestations</a>
-<a class="nav-links-item" href="realisations.html">Réalisations</a>
-<a class="nav-links-item" href="contact.html">Contact</a>
-
+      <a class="nav-links-item" href="services.html">Prestations</a>
+      <a class="nav-links-item" href="realisations.html">Réalisations</a>
+      <a class="nav-links-item" href="contact.html">Contact</a>
       <a class="nav-cta" href="contact.html">Demander un devis</a>
     </nav>
     <label for="nav-toggle" class="burger" aria-label="Ouvrir le menu">
@@ -517,7 +554,7 @@ button[disabled]{opacity:.6; cursor:not-allowed;}
     <div>
       <span class="eyebrow">Artisan à Condom · Gers (32)</span>
       <h1>Chaque mur a une histoire.<br>On la construit <em>avec vous</em>.</h1>
-      <p class="lede">Plâtrerie, isolation, carrelage et peinture — un seul artisan, plâtrier-staffeur et sculpteur bas-relief de formation, du premier coup de crayon à la dernière finition, pour vos travaux de rénovation dans le Gers.</p>
+      <p class="lede">Plâtrerie, isolation, carrelage et peinture — un seul artisan, plâtrier-staffeur et sculpteur bas-relief de formation, du premier coup de crayon à la dernière finition.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="contact.html">Demander un devis gratuit</a>
         <a class="btn btn-ghost" href="realisations.html">Voir nos réalisations</a>
@@ -587,6 +624,41 @@ button[disabled]{opacity:.6; cursor:not-allowed;}
   </div>
 </section>
 
+<section class="gallery-section" id="galerie">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Galerie photo</span>
+      <h2>Quelques chantiers et finitions réalisées</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-card large">
+        <img src="images/lanne-salon-05-cheminee-caissons.jpg" alt="Plafond à caissons et cheminée restaurée dans un salon" loading="lazy">
+        <figcaption>Plafond à caissons — Lanne</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <img src="images/isolation-05-vue-ensemble.jpg" alt="Plafond incliné isolé et habillé sous charpente" loading="lazy">
+        <figcaption>Isolation sous charpente</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <img src="images/sdb-04-douche-italienne.jpg" alt="Salle de bain avec douche à l'italienne carrelée" loading="lazy">
+        <figcaption>Douche italienne</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <img src="images/sejour-04-vue-ensemble.jpg" alt="Séjour rénové avec plafond et cloisons finis" loading="lazy">
+        <figcaption>Rénovation de séjour</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <img src="images/sculpture-console-01-cartouche.jpg" alt="Console de cheminée sculptée en bas-relief" loading="lazy">
+        <figcaption>Sculpture bas-relief</figcaption>
+      </figure>
+      <figure class="gallery-card large">
+        <img src="images/fondelin-05-rosace-restauree.jpg" alt="Rosace de plafond restaurée et décorée" loading="lazy">
+        <figcaption>Restauration de rosace</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section id="pourquoi">
   <div class="wrap">
     <div class="section-head">
@@ -619,8 +691,8 @@ button[disabled]{opacity:.6; cursor:not-allowed;}
     <div>
       <span class="eyebrow">Presse</span>
       <h2>Portrait dans La Dépêche du Dimanche</h2>
-      <p>Formé dès son plus jeune âge auprès de son père André, créateur de cheminées, Eric Pellegrino a appris le métier à l'ancienne : CAP de plâtrier, puis plusieurs années au sein d'un cercle restreint d'artisans œuvrant à la restauration de bâtiments historiques classés, aux côtés des Bâtiments de France, sur des monuments à Arras et à Douai. Il y a acquis, au contact d'autres artisans, le goût du travail du bois qui vient aujourd'hui compléter sa maîtrise du plâtre et du staff.</p>
-      <p>Depuis l'ouverture de son propre atelier à Condom, il crée notamment des consoles de cheminée sculptées sur mesure — drapé, marqueterie, motifs floraux ou coquille Saint-Jacques — dont la réalisation demande couramment entre 100 et 200 heures de travail.</p>
+      <p>Formé dès son plus jeune âge auprès de son père André, créateur de cheminées, Eric Pellegrino a appris le métier à l'ancienne : CAP de plâtrier, puis plusieurs années au sein d'entreprises de second œuvre.</p>
+      <p>Depuis l'ouverture de son propre atelier à Condom, il crée notamment des consoles de cheminée sculptées sur mesure — drapé, marqueterie, motifs floraux ou coquille Saint-Jacques.</p>
       <span class="presse-source">La Dépêche du Dimanche — édition Condom Armagnac, rubrique Artisanat</span>
     </div>
   </div>
