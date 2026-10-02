@@ -1,4 +1,156 @@
-# Pellegrino Rénovation
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Réalisations | Pellegrino Rénovation — Gers</title><meta name="description" content="Découvrez les réalisations de Pellegrino Rénovation dans le Gers : plâtrerie, corniches et moulures, restauration de décors, mortier de chaux, fausse pierre et carrelage."><style>
+:root{--bg:#f4eddd;--paper:#fffaf0;--ink:#27282a;--muted:#756f63;--line:#ddd2bc;--accent:#c45f32;--dark:#252629;--soft:#eadfc6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(244,237,221,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:700;font-size:18px}.logo small{color:var(--accent);font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-left:6px}.links{display:flex;gap:26px;align-items:center;font-size:13px}.links a:hover{text-decoration:underline;text-underline-offset:4px}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:white;padding:12px 18px;font-weight:700;font-size:12px}.btn.outline{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.hero{padding:86px 0 72px;background:var(--soft);border-bottom:1px solid var(--line)}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700}.hero h1{font-family:Georgia,serif;font-size:clamp(48px,7vw,82px);line-height:.95;max-width:850px;margin:14px 0 22px}.hero p{max-width:720px;font-size:18px;color:#5f594e}.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.intro{padding:78px 0 20px}.intro h2,.project h2{font-family:Georgia,serif;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:8px 0 14px}.intro p{max-width:760px;color:var(--muted);font-size:16px}.project{padding:68px 0;border-top:1px solid var(--line)}.project-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:30px}.project-head p{color:var(--muted);margin:0}.tag{display:inline-block;padding:6px 9px;background:#e9dcc0;color:#795e4e;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{grid-column:span 4;background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 28px rgba(45,38,26,.08);overflow:hidden}.card.wide{grid-column:span 6}.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.card figcaption{padding:14px 16px 17px}.card strong{display:block;font-family:Georgia,serif;font-size:18px;margin-bottom:4px}.card span{font-size:11px;color:var(--muted)}
+.callout{margin:70px 0;background:var(--dark);color:white;padding:54px 0}.callout .inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.callout h2{font-family:Georgia,serif;font-size:38px;line-height:1.05;margin:0 0 8px}.callout p{color:#d6d0c4;margin:0}.callout .actions{display:flex;gap:10px;flex-wrap:wrap}
+.note{padding:18px 20px;border-left:3px solid var(--accent);background:#eee3cd;color:#655f55;font-size:13px;margin:30px 0}.note strong{color:var(--ink)}footer{background:#e9dec5;padding:42px 0 30px;border-top:1px solid var(--line)}footer .footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}footer h4{font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 12px}footer p,footer a{font-size:12px;color:#655f55}footer .copy{border-top:1px solid #d5c9b0;margin-top:30px;padding-top:18px;font-size:10px;color:#777064}
+@media(max-width:800px){.links{gap:10px}.links a:not(.btn){display:none}.hero{padding:60px 0}.project-head{grid-template-columns:1fr;gap:14px}.card,.card.wide{grid-column:span 6}.callout .inner{flex-direction:column;align-items:flex-start}footer .footgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}.card,.card.wide{grid-column:span 12}.hero h1{font-size:50px}footer .footgrid{grid-template-columns:1fr}}
+</style>
+<style>
+.press{padding:86px 0;background:var(--soft);border-top:1px solid var(--line)}
+.press-grid{display:grid;grid-template-columns:1fr .85fr;gap:56px;align-items:center}
+.press h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,52px);line-height:1.05;margin:12px 0 22px;max-width:620px}
+.press p{max-width:620px;color:#5f594e}
+.press-note{font-size:14px}
+.press-card{margin:0;background:var(--paper);padding:14px;box-shadow:0 18px 40px rgba(39,40,42,.10)}
+.press-card img{display:block;width:100%;height:auto}
+.press-card figcaption{padding:12px 4px 2px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:760px){.press-grid{grid-template-columns:1fr;gap:30px}.press{padding:60px 0}}
+</style>
+
+
+<style>
+.project-rosace{padding:88px 0;border-top:1px solid var(--line)}
+.project-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:36px}
+.project-head h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,52px);line-height:1.06;margin:12px 0;max-width:720px}
+.project-head p{max-width:700px;color:#5f594e}
+.project-tag{font-size:11px;text-transform:uppercase;letter-spacing:.1em;border:1px solid var(--line);padding:10px 12px;white-space:nowrap}
+.rosace-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.rosace-grid figure{margin:0;background:var(--paper);padding:9px;box-shadow:0 12px 28px rgba(39,40,42,.08)}
+.rosace-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.rosace-grid figcaption{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding:10px 3px 3px}
+@media(max-width:900px){.rosace-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.project-head{display:block}.project-tag{display:inline-block;margin-top:12px}.rosace-grid{grid-template-columns:1fr}}
+</style>
+
+
+<style>
+.project-enduit{padding:88px 0;border-top:1px solid var(--line)}
+.enduit-feature{margin:35px 0 0;background:var(--paper);padding:12px;box-shadow:0 16px 36px rgba(39,40,42,.09)}
+.enduit-feature img{display:block;width:100%;height:auto}
+.enduit-feature figcaption{padding:12px 4px 3px;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+</style>
+
+</head><body>
+<header><div class="wrap nav"><a class="logo" href="#top">Pellegrino <small>Rénovation</small></a><nav class="links"><a href="#prestations">Prestations</a><a href="#realisations">Réalisations</a><a href="#contact">Contact</a><a class="btn" href="tel:+33648061892">Demander un devis</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div class="eyebrow">Réalisations — Gers (32)</div><h1>Des chantiers concrets, jusque dans les finitions.</h1><p>Découvrez une sélection de travaux réalisés par Pellegrino Rénovation : plâtrerie, corniches et moulures, restauration de décors, mortier de chaux, fausse pierre et carrelage.</p><div class="hero-actions"><a class="btn" href="tel:+33648061892">Demander un devis</a><a class="btn outline" href="#realisations">Voir les réalisations</a></div></div></section>
+<section class="intro" id="prestations"><div class="wrap"><div class="eyebrow">Savoir-faire</div><h2>Un travail artisanal, documenté étape par étape.</h2><p>Les photos montrent les chantiers, la fabrication, la pose et les finitions. L'objectif : présenter le travail réel, sans images génériques.</p></div></section>
+<section class="project" id="realisations"><div class="wrap"><div class="project-head"><div><span class="tag">01 · Plâtrerie & placo</span><h2>Structurer et transformer les espaces.</h2></div><p>Création de plafonds, cloisons, doublages et reprises, avec une attention particulière portée aux raccords et aux finitions.</p></div><div class="grid">
+<figure class="card wide"><img src="platrerie-01.jpg" alt="Plafond en plaques de plâtre en cours de finition" loading="lazy"><figcaption><strong>Préparation du plafond</strong><span>Chantier — Château Labarthe</span></figcaption></figure>
+<figure class="card"><img src="platrerie-02.jpg" alt="Plafond et bandes à joints en cours" loading="lazy"><figcaption><strong>Travail des plafonds</strong><span>Plâtrerie & finitions</span></figcaption></figure>
+<figure class="card"><img src="platrerie-03.jpg" alt="Plafond avec éléments décoratifs en plâtre" loading="lazy"><figcaption><strong>Intégration des éléments décoratifs</strong><span>Chantier — Château Labarthe</span></figcaption></figure>
+<figure class="card"><img src="platrerie-04.jpg" alt="Plafond en phase de finition" loading="lazy"><figcaption><strong>Finitions</strong><span>Préparation avant finition</span></figcaption></figure>
+</div></div></section>
+<section class="project"><div class="wrap"><div class="project-head"><div><span class="tag">02 · Corniches & moulures</span><h2>Des éléments décoratifs réalisés sur mesure.</h2></div><p>De la préparation des profils à la pose, les corniches et moulures sont ajustées au style et aux proportions de chaque intérieur.</p></div><div class="grid">
+<figure class="card"><img src="corniches-01.jpg" alt="Éléments de corniche préparés pour la pose" loading="lazy"><figcaption><strong>Préparation des éléments</strong><span>Fabrication & préparation</span></figcaption></figure>
+<figure class="card wide"><img src="corniches-02.jpg" alt="Moulures en plâtre préparées en atelier" loading="lazy"><figcaption><strong>Travail en atelier</strong><span>Corniches et moulures</span></figcaption></figure>
+<figure class="card"><img src="corniches-03.jpg" alt="Corniche posée au plafond" loading="lazy"><figcaption><strong>Pose et ajustement</strong><span>Chantier — Château Labarthe</span></figcaption></figure>
+<figure class="card"><img src="corniches-04.jpg" alt="Finition d'une corniche en plâtre" loading="lazy"><figcaption><strong>Finition</strong><span>Détail de corniche</span></figcaption></figure>
+</div></div></section>
+<section class="project"><div class="wrap"><div class="project-head"><div><span class="tag">03 · Restauration de décors</span><h2>Redonner vie aux décors anciens.</h2></div><p>Travail de restauration sur des rosaces, moulures et éléments décoratifs en plâtre, avec respect des formes existantes.</p></div><div class="grid">
+<figure class="card wide"><img src="fondelin-01.jpg" alt="Rosace décorative restaurée au plafond" loading="lazy"><figcaption><strong>Rosace restaurée</strong><span>Château de Fondelin</span></figcaption></figure>
+<figure class="card"><img src="fondelin-02.jpg" alt="Élément de rosace en cours de restauration" loading="lazy"><figcaption><strong>Travail de restauration</strong><span>Château de Fondelin</span></figcaption></figure>
+<figure class="card"><img src="fondelin-03.jpg" alt="Décor en plâtre en cours de restauration" loading="lazy"><figcaption><strong>Reprise des décors</strong><span>Restauration</span></figcaption></figure>
+<figure class="card"><img src="fondelin-04.jpg" alt="Détail de moulure restaurée" loading="lazy"><figcaption><strong>Détail de moulure</strong><span>Finition décorative</span></figcaption></figure>
+</div></div></section>
+<section class="project"><div class="wrap"><div class="project-head"><div><span class="tag">04 · Mortier de chaux & fausse pierre</span><h2>Travailler la matière et l'aspect minéral.</h2></div><p>Un chantier dédié au mortier de chaux et à la réalisation d'un aspect fausse pierre, depuis la préparation jusqu'au rendu final.</p></div><div class="grid">
+<figure class="card wide"><img src="chaux-01.jpg" alt="Façade en pierre et travail au mortier de chaux" loading="lazy"><figcaption><strong>Préparation du support</strong><span>Mortier de chaux & fausse pierre</span></figcaption></figure>
+<figure class="card"><img src="chaux-02.jpg" alt="Travail de finition au mortier de chaux" loading="lazy"><figcaption><strong>Mise en forme</strong><span>Travail de la matière</span></figcaption></figure>
+<figure class="card"><img src="chaux-03.jpg" alt="Encadrement de porte traité au mortier de chaux" loading="lazy"><figcaption><strong>Encadrement</strong><span>Finition minérale</span></figcaption></figure>
+<figure class="card"><img src="chaux-04.jpg" alt="Rendu final d'une ouverture traitée au mortier de chaux" loading="lazy"><figcaption><strong>Rendu final</strong><span>Aspect fausse pierre</span></figcaption></figure>
+</div></div></section>
+<section class="project"><div class="wrap"><div class="project-head"><div><span class="tag">05 · Carrelage & faïence</span><h2>Des surfaces propres et durables.</h2></div><p>Pose de carrelage et de faïence dans une salle de bains, avec soin porté aux alignements, découpes et finitions.</p></div><div class="grid">
+<figure class="card wide"><img src="carrelage-01.jpg" alt="Salle de bains carrelée terminée" loading="lazy"><figcaption><strong>Résultat final</strong><span>Rénovation de salle de bains</span></figcaption></figure>
+<figure class="card"><img src="carrelage-02.jpg" alt="Douche carrelée avec faïence murale" loading="lazy"><figcaption><strong>Faïence murale</strong><span>Pose et finitions</span></figcaption></figure>
+<figure class="card"><img src="carrelage-03.jpg" alt="Pose de carrelage au sol dans une salle de bains" loading="lazy"><figcaption><strong>Pose au sol</strong><span>Carrelage</span></figcaption></figure>
+<figure class="card"><img src="carrelage-04.jpg" alt="Douche terminée avec carrelage mural" loading="lazy"><figcaption><strong>Douche terminée</strong><span>Faïence & finitions</span></figcaption></figure>
+</div></div></section>
+<section class="project"><div class="wrap"><div class="project-head"><div><span class="tag">06 · Isolation</span><h2>Un savoir-faire à compléter par vos prochaines photos.</h2></div><p>La prestation d'isolation fait partie des services de Pellegrino Rénovation. Cette galerie sera enrichie dès réception de photos de chantiers d'isolation.</p></div><div class="note"><strong>À venir :</strong> photos de chantiers d'isolation thermique et phonique pour compléter cette rubrique avec des réalisations réelles.</div></div></section>
+<section class="callout" id="contact"><div class="wrap inner"><div><h2>Un projet de rénovation ?<br>Parlons-en.</h2><p>Déplacement et devis gratuits dans tout le Gers.</p></div><div class="actions"><a class="btn" href="tel:+33648061892">Demander un devis</a><a class="btn outline" style="color:white;border-color:#aaa" href="tel:+33648061892">06 48 06 18 92</a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="footgrid"><div><h4>Pellegrino Rénovation</h4><p>Entreprise individuelle de second œuvre spécialisée en plâtrerie, corniches, moulures, isolation et carrelage. Basée à Condom, elle intervient dans tout le Gers.</p></div><div><h4>Navigation</h4><p><a href="#prestations">Prestations</a><br><a href="#realisations">Réalisations</a><br><a href="#contact">Contact</a></p></div><div><h4>Coordonnées</h4><p>9 rue Grichet, 32100 Condom<br><a href="tel:+33648061892">06 48 06 18 92</a><br><a href="mailto:ericpellegrino@live.fr">ericpellegrino@live.fr</a></p></div></div><div class="copy">© 2026 Pellegrino Rénovation, EI · SIRET 421 291 006 00029 · TVA non applicable, article 293 B du CGI.</div></div></footer>
+
+<section class="press">
+  <div class="wrap">
+    <div class="press-grid">
+      <div>
+        <div class="eyebrow">Dans la presse</div>
+        <h2>Un savoir-faire artisanal mis à l’honneur.</h2>
+        <p>
+          Un article consacré au parcours d’Éric Pellegrino et à son travail artisanal
+          dans <strong>La Dépêche du Dimanche</strong>, édition Condom Armagnac.
+        </p>
+        <p class="press-note">
+          L’article revient notamment sur son apprentissage du métier de plâtrier à l’ancienne,
+          son travail de restauration et son attachement aux savoir-faire traditionnels.
+        </p>
+      </div>
+      <figure class="press-card">
+        <img src="presse-depeche.jpg" alt="Article de La Dépêche du Dimanche consacré au savoir-faire artisanal d’Éric Pellegrino">
+        <figcaption>La Dépêche du Dimanche — Condom Armagnac</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="project project-rosace">
+  <div class="wrap">
+    <div class="eyebrow">Réalisation — Rosace</div>
+    <div class="project-head">
+      <div>
+        <h2>Création d’une rosace décorative en plâtre.</h2>
+        <p>Un travail artisanal réalisé pièce par pièce : préparation des éléments, assemblage, sculpture des détails et finitions.</p>
+      </div>
+      <div class="project-tag">Savoir-faire traditionnel</div>
+    </div>
+    <div class="rosace-grid">
+      <figure><img src="DSC_0460.jpg" alt="Rosace décorative en plâtre en cours de réalisation"><figcaption>Assemblage des éléments</figcaption></figure>
+      <figure><img src="DSC_0465.jpg" alt="Rosace en plâtre avant finition"><figcaption>Mise en forme de la rosace</figcaption></figure>
+      <figure><img src="DSC_0469.jpg" alt="Détail sculpté d'une rosace en plâtre"><figcaption>Détail sculpté</figcaption></figure>
+      <figure><img src="DSC_0471.jpg" alt="Rosace et éléments décoratifs en plâtre"><figcaption>Travail des ornements</figcaption></figure>
+      <figure><img src="DSC_0477.jpg" alt="Rosace décorative installée"><figcaption>Intégration au décor</figcaption></figure>
+      <figure><img src="DSC_0479.jpg" alt="Détail floral d'une rosace en plâtre"><figcaption>Détail floral</figcaption></figure>
+      <figure><img src="DSC_0489.jpg" alt="Motifs décoratifs d'une rosace en plâtre"><figcaption>Finition des motifs</figcaption></figure>
+      <figure><img src="DSC_0490.jpg" alt="Vue finale d'une rosace décorative en plâtre"><figcaption>Vue finale</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="project project-enduit">
+  <div class="wrap">
+    <div class="eyebrow">Réalisation — Enduit</div>
+    <div class="project-head">
+      <div>
+        <h2>Enduit plâtre traditionnel.</h2>
+        <p>Réalisation d’enduits en plâtre traditionnel pour obtenir des surfaces régulières et soignées, avec un travail précis des supports et des finitions.</p>
+      </div>
+      <div class="project-tag">Savoir-faire traditionnel</div>
+    </div>
+    <figure class="enduit-feature">
+      <img src="enduit-platre-traditionnel.jpg" alt="Réalisation d'un enduit en plâtre traditionnel sur murs et plafonds">
+      <figcaption>Enduit plâtre traditionnel — préparation, application et finition des surfaces.</figcaption>
+    </figure>
+  </div>
+</section>
+
+</body></html># Pellegrino Rénovation
 
 Site vitrine de Pellegrino Rénovation, plâtrier-staffeur à Condom (Gers) : plâtrerie, staff et moulures, placo, isolation, carrelage et peinture.
 
