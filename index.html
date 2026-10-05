@@ -1,373 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pellegrino Rénovation — Artisan second œuvre à Condom</title>
-  <meta name="description" content="Plâtrerie, isolation, carrelage et finitions. Artisan à Condom, intervient dans tout le Gers." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --chaux:#F4EEE0;
-      --chaux-warm:#EDE3CC;
-      --ardoise:#24262A;
-      --ardoise-soft:#4A4D52;
-      --terre-cuite:#BE5A2E;
-      --terre-cuite-dark:#8A3D1D;
-      --pierre:#A79878;
-      --pierre-light:#D9CFB8;
-      --sauge:#5F6E52;
-      --blanc:#FFFCF6;
-      --ombre:0 18px 40px -18px rgba(36,38,42,.35);
-      --rayon:2px;
-    }
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      margin:0;
-      background:var(--chaux);
-      color:var(--ardoise);
-      font-family:"Work Sans", sans-serif;
-      line-height:1.6;
-      font-size:16px;
-      -webkit-font-smoothing:antialiased;
-    }
-    img{max-width:100%; display:block;}
-    a{text-decoration:none; color:inherit;}
-    h1,h2,h3,h4{
-      margin:0 0 .55em;
-      font-family:"Fraunces", serif;
-      line-height:1.08;
-      letter-spacing:-.02em;
-      color:var(--ardoise);
-      font-weight:600;
-    }
-    p{margin:0;}
-    .mono{font-family:"IBM Plex Mono", monospace; letter-spacing:.04em;}
-    .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:15px 26px; border-radius:2px; font-weight:600; font-size:.95rem;
-      transition:all .2s ease; border:1px solid transparent; cursor:pointer; text-decoration:none;
-    }
-    .btn-primary{background:var(--terre-cuite); color:var(--blanc);}
-    .btn-primary:hover{background:var(--terre-cuite-dark); transform:translateY(-1px);}
-    .btn-ghost{border-color:var(--ardoise); color:var(--ardoise); background:transparent;}
-    .btn-ghost:hover{background:var(--ardoise); color:var(--blanc);}
-    .btn-ghost-light{border-color:rgba(255,252,246,.6); background:transparent; color:var(--blanc);}
-    .btn-ghost-light:hover{background:var(--blanc); color:var(--terre-cuite-dark);}
-    .site-nav{
-      position:sticky; top:0; z-index:50; background:rgba(244,238,224,.92); backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(36,38,42,.08);
-    }
-    .nav-inner{max-width:1180px; margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
-    .brand{display:flex; align-items:baseline; gap:8px; font-family:"Fraunces", serif; font-size:1.2rem; font-weight:600; color:var(--ardoise);}
-    .brand small{font-family:"IBM Plex Mono", monospace; font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark);}
-    .nav-links{display:flex; align-items:center; gap:30px; font-size:.96rem; font-weight:500;}
-    .nav-links a{position:relative; color:var(--ardoise-soft); padding:4px 0;}
-    .nav-links a:hover{color:var(--terre-cuite-dark);}
-    .nav-links a.active{color:var(--ardoise);}
-    .nav-links a.active::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--terre-cuite);}
-    .nav-cta{background:var(--terre-cuite); color:var(--blanc)!important; padding:12px 20px; border-radius:2px; font-weight:600; white-space:nowrap;}
-    .nav-cta:hover{background:var(--terre-cuite-dark);}
-    .nav-toggle{display:none;}
-    .burger{display:none;}
-    @media (max-width:860px){
-      .nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38,42,.08); opacity:0; pointer-events:none; transform:translateY(-8px); transition:opacity .18s ease, transform .18s ease;}
-      .nav-toggle:checked ~ .nav-links{opacity:1; pointer-events:auto; transform:translateY(0);}
-      .nav-links a{width:100%; padding:14px 0; border-bottom:1px solid rgba(36,38,42,.08);}
-      .nav-links .nav-cta{width:100%; margin-top:12px; text-align:center; border-bottom:none;}
-      .burger{display:flex; flex-direction:column; gap:5px; width:28px; cursor:pointer;}
-      .burger span{display:block; background:var(--ardoise); height:2px;}
-      .nav-toggle:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-      .nav-toggle:checked ~ .burger span:nth-child(2){opacity:0;}
-      .nav-toggle:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    }
-    .hero{padding:76px 0 64px;}
-    .hero-inner{display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center;}
-    .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:"IBM Plex Mono", monospace; font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark);}
-    .eyebrow::before{content:""; width:20px; height:1px; background:var(--terre-cuite-dark); display:block;}
-    .hero h1{font-size:clamp(2.5rem, 5vw, 4rem); max-width:12ch; margin-bottom:22px;}
-    .hero h1 em{font-style:italic; color:var(--terre-cuite-dark);}
-    .hero .lede{font-size:1.12rem; color:var(--ardoise-soft); max-width:46ch; margin-bottom:30px;}
-    .hero-ctas{display:flex; flex-wrap:wrap; gap:14px;}
-    .crosssection-card{background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; box-shadow:var(--ombre); padding:26px 22px 20px;}
-    .crosssection-card svg{width:100%; height:220px; display:block; border-radius:4px; background:linear-gradient(180deg, #F1F0EE, #E7E3DA);}
-    .crosssection-card .cap{display:flex; justify-content:space-between; align-items:baseline; font-family:"IBM Plex Mono", monospace; font-size:.7rem; letter-spacing:.06em; color:var(--ardoise-soft); margin-top:10px;}
-    .strip{border-top:1px solid rgba(36,38,42,.1); border-bottom:1px solid rgba(36,38,42,.1); background:var(--chaux-warm);}
-    .strip-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);}
-    .strip-item{padding:22px 28px; border-right:1px solid rgba(36,38,42,.1);}
-    .strip-item:last-child{border-right:none;}
-    .strip-item .num{display:block; font-family:"Fraunces", serif; font-size:1.55rem; color:var(--terre-cuite-dark); margin-bottom:8px;}
-    .strip-item .lab{font-family:"IBM Plex Mono", monospace; font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ardoise-soft);}
-    section{padding:88px 0;}
-    .section-head{max-width:640px; margin-bottom:42px;}
-    .section-head h2{font-size:clamp(2rem, 3vw, 2.8rem); margin-bottom:12px;}
-    .section-head p{font-size:1.04rem; color:var(--ardoise-soft);}
-    .metier-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(36,38,42,.12); border:1px solid rgba(36,38,42,.12);}
-    .metier-card{display:flex; flex-direction:column; gap:14px; padding:28px 26px 24px; background:var(--blanc); transition:background .2s ease;}
-    .metier-card:hover{background:var(--chaux-warm);}
-    .metier-card .icon{width:100%; height:150px; overflow:hidden; background:var(--chaux-warm); border-radius:4px;}
-    .metier-card .icon img{width:100%; height:100%; object-fit:cover; display:block;}
-    .metier-card h3{font-size:1.16rem;}
-    .metier-card p{color:var(--ardoise-soft); flex:1;}
-    .metier-card .go{font-family:"IBM Plex Mono", monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--terre-cuite-dark);}
-    .gallery-section{padding-top:8px;}
-    .gallery-grid{display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:18px; margin-bottom:28px;}
-    .gallery-card{background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; box-shadow:var(--ombre); overflow:hidden;}
-    .gallery-card.large{grid-column:span 2;}
-    .gallery-card img{width:100%; height:260px; object-fit:cover; display:block;}
-    .gallery-card.large img{height:420px;}
-    .gallery-card figcaption{padding:12px 14px 16px; font-family:"IBM Plex Mono", monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ardoise-soft);}
-    .gallery-link{text-align:center; padding:24px; background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; box-shadow:var(--ombre);}
-    .gallery-link p{color:var(--ardoise-soft); font-size:.95rem; margin-bottom:12px;}
-    .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
-    .why-item .tag{display:block; margin-bottom:10px; font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--terre-cuite-dark);}
-    .why-item h3{font-size:1.14rem; margin-bottom:10px;}
-    .why-item p{color:var(--ardoise-soft);}
-    .quote-section{background:var(--chaux-warm); border-top:1px solid rgba(36,38,42,.1); border-bottom:1px solid rgba(36,38,42,.1);}
-    .quote-inner{display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:start; max-width:900px; margin:0 auto; padding:64px 28px;}
-    .quote-mark{font-family:"Fraunces", serif; font-weight:800; font-size:3rem; color:var(--pierre); line-height:1;}
-    .quote-inner h2{font-size:1.6rem; margin-bottom:14px;}
-    .quote-inner p{color:var(--ardoise-soft); margin-bottom:10px;}
-    .quote-source{font-family:"IBM Plex Mono", monospace; font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--ardoise-soft);}
-    .project-github{padding:44px 0;}
-    .project-box{background:var(--blanc); border:1px solid rgba(36,38,42,.08); box-shadow:var(--ombre); padding:32px 28px; border-radius:8px; max-width:640px;}
-    .project-box h3{margin:0 0 12px; font-size:clamp(1.4rem, 2vw, 1.8rem);}
-    .project-box p{color:var(--ardoise-soft); margin-bottom:18px;}
-    .cta-band{background:var(--ardoise); color:var(--blanc); padding:64px 0;}
-    .cta-band .wrap{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
-    .cta-band h2{color:var(--blanc); font-size:clamp(1.8rem,3vw,2.4rem); max-width:16ch;}
-    .cta-band p{color:rgba(255,252,246,.72); margin-top:8px; max-width:38ch;}
-    .cta-band .ctas{display:flex; flex-wrap:wrap; gap:14px;}
-    footer{background:var(--chaux-warm); border-top:1px solid rgba(36,38,42,.1); padding:52px 0 28px;}
-    .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:32px;}
-    .footer-grid h4{margin-bottom:14px; font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ardoise-soft);}
-    .footer-grid p, .footer-grid li{color:var(--ardoise-soft); font-size:.93rem;}
-    .footer-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;}
-    .footer-bottom{border-top:1px solid rgba(36,38,42,.12); padding-top:18px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:"IBM Plex Mono", monospace; font-size:.72rem;}
-    @media (max-width:980px){
-      .hero-inner{grid-template-columns:1fr;}
-      .gallery-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
-      .gallery-card.large{grid-column:span 2;}
-      .why-grid{grid-template-columns:1fr;}
-      .footer-grid{grid-template-columns:1fr;}
-      .strip-inner{grid-template-columns:repeat(2,1fr);}
-    }
-    @media (max-width:560px){
-      .gallery-grid{grid-template-columns:1fr;}
-      .gallery-card.large{grid-column:auto;}
-      .gallery-card img, .gallery-card.large img{height:260px;}
-      .nav-inner{padding:14px 20px;}
-      .wrap{padding:0 20px;}
-      .strip-item{padding:16px 18px;}
-      .cta-band .wrap{align-items:flex-start;}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pellegrino Rénovation — Plâtrier-staffeur à Condom (Gers)</title>
+<meta name="description" content="Plâtrerie, staff décoratif, placo, isolation, carrelage et peinture à Condom, dans tout le Gers. Artisan plâtrier-staffeur, devis gratuit.">
+<meta name="theme-color" content="#B5541A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Pellegrino Rénovation">
+<meta property="og:title" content="Pellegrino Rénovation — Plâtrier-staffeur à Condom (Gers)">
+<meta property="og:description" content="Plâtrerie, staff décoratif, placo, isolation, carrelage et peinture à Condom, dans tout le Gers. Artisan plâtrier-staffeur, devis gratuit.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.fig[hidden],.press-media[hidden],.gallery-group[hidden]{display:block}</style></noscript>
+<script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Pellegrino <small>Rénovation</small></a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <nav class="nav-links">
-        <a class="active" href="index.html">Accueil</a>
-        <a href="services.html">Prestations</a>
-        <a href="realisations.html">Réalisations</a>
-        <a href="contact.html">Contact</a>
-        <a class="nav-cta" href="contact.html">Demander un devis</a>
-      </nav>
-      <label class="burger" for="nav-toggle" aria-label="Ouvrir le menu">
-        <span></span><span></span><span></span>
-      </label>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <div>
-        <span class="eyebrow">Artisan à Condom • Gers (32)</span>
-        <h1>Chaque mur a une histoire.<br>On la construit <em>avec vous</em>.</h1>
-        <p class="lede">Plâtrerie, isolation, carrelage et peinture — un seul artisan pour le second œuvre, du premier coup de crayon à la dernière finition.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="contact.html">Demander un devis gratuit</a>
-          <a class="btn btn-ghost" href="realisations.html">Voir nos réalisations</a>
-        </div>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="favicon.svg" alt="" width="36" height="36"><span>Pellegrino Rénovation</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="services.html">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary btn-small" href="devis.html">Demander un devis</a>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Pellegrino Rénovation","url":"https://pellegrino-b8c0b2renovation.netlify.app/","telephone":"+33648061892","email":"ericpellegrino@live.fr","areaServed":"Gers","address":{"@type":"PostalAddress","streetAddress":"9 rue Grichet","postalCode":"32100","addressLocality":"Condom","addressRegion":"Gers","addressCountry":"FR"}}
+</script>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Plâtrier-staffeur à Condom, dans le Gers</h1>
+      <p class="lead">Du décor en staff sculpté à la rénovation d’un intérieur : plâtrerie, placo, isolation, carrelage et peinture, par un artisan formé au métier auprès de son père.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="devis.html">Demander un devis gratuit</a>
+        <a class="btn btn-ghost" href="realisations.html">Voir les réalisations</a>
       </div>
-      <div class="crosssection-card">
-        <svg viewBox="0 0 220 150" role="img" aria-label="Coupe d'un mur doublé">
-          <rect x="0" y="0" width="220" height="150" fill="none"/>
-          <rect x="8" y="14" width="18" height="122" fill="#A79878"/>
-          <rect x="26" y="14" width="36" height="122" fill="#D9CFB8"/>
-          <rect x="62" y="14" width="12" height="122" fill="#5F6E52" opacity=".55"/>
-          <rect x="74" y="14" width="34" height="122" fill="#EDE3CC"/>
-          <rect x="108" y="14" width="8" height="122" fill="#BE5A2E"/>
-          <line x1="8" y1="136" x2="116" y2="136" stroke="#24262A" stroke-width="1" stroke-dasharray="2 3"/>
-        </svg>
-        <div class="cap"><span>COUPE — DOUBLAGE ISOLANT</span><span>DTU 25.42</span></div>
-      </div>
+      <p class="hero-phone">Ou appelez-moi : <a href="tel:+33648061892">06 48 06 18 92</a></p>
     </div>
-  </section>
+    <svg class="rosace" viewBox="0 0 400 400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="relief" x="-10%" y="-10%" width="125%" height="130%"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#4A1C06" flood-opacity=".5"/></filter></defs>
+<circle cx="200" cy="200" r="198" fill="#B5541A"/>
+<circle cx="200" cy="200" r="188" fill="none" stroke="#FBF3E7" stroke-opacity=".35" stroke-width="1.5"/>
+<g filter="url(#relief)"><circle cx="200" cy="200" r="172" fill="#FFFBF4"/></g>
+<circle cx="200" cy="200" r="158" fill="#F4E8D6"/>
+<g fill="#FFFBF4" filter="url(#relief)"><circle cx="364.0" cy="200.0" r="4.4"/><circle cx="360.8" cy="232.0" r="4.4"/><circle cx="351.5" cy="262.8" r="4.4"/><circle cx="336.4" cy="291.1" r="4.4"/><circle cx="316.0" cy="316.0" r="4.4"/><circle cx="291.1" cy="336.4" r="4.4"/><circle cx="262.8" cy="351.5" r="4.4"/><circle cx="232.0" cy="360.8" r="4.4"/><circle cx="200.0" cy="364.0" r="4.4"/><circle cx="168.0" cy="360.8" r="4.4"/><circle cx="137.2" cy="351.5" r="4.4"/><circle cx="108.9" cy="336.4" r="4.4"/><circle cx="84.0" cy="316.0" r="4.4"/><circle cx="63.6" cy="291.1" r="4.4"/><circle cx="48.5" cy="262.8" r="4.4"/><circle cx="39.2" cy="232.0" r="4.4"/><circle cx="36.0" cy="200.0" r="4.4"/><circle cx="39.2" cy="168.0" r="4.4"/><circle cx="48.5" cy="137.2" r="4.4"/><circle cx="63.6" cy="108.9" r="4.4"/><circle cx="84.0" cy="84.0" r="4.4"/><circle cx="108.9" cy="63.6" r="4.4"/><circle cx="137.2" cy="48.5" r="4.4"/><circle cx="168.0" cy="39.2" r="4.4"/><circle cx="200.0" cy="36.0" r="4.4"/><circle cx="232.0" cy="39.2" r="4.4"/><circle cx="262.8" cy="48.5" r="4.4"/><circle cx="291.1" cy="63.6" r="4.4"/><circle cx="316.0" cy="84.0" r="4.4"/><circle cx="336.4" cy="108.9" r="4.4"/><circle cx="351.5" cy="137.2" r="4.4"/><circle cx="360.8" cy="168.0" r="4.4"/></g>
+<g fill="#FFFBF4" stroke="#E3D0B6" stroke-width="1.2" filter="url(#relief)"><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(0.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(22.5 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(45.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(67.5 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(90.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(112.5 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(135.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(157.5 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(180.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(202.5 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(225.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(247.5 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(270.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(292.5 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(315.0 200 200)"/><path d="M200,48 C220,80 220,116 200,144 C180,116 180,80 200,48Z" transform="rotate(337.5 200 200)"/></g>
+<g fill="#F4E8D6" stroke="#E3D0B6" stroke-width="1" filter="url(#relief)"><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(11.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(33.75 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(56.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(78.75 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(101.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(123.75 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(146.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(168.75 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(191.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(213.75 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(236.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(258.75 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(281.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(303.75 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(326.25 200 200)"/><path d="M200,88 C212,108 212,128 200,146 C188,128 188,108 200,88Z" transform="rotate(348.75 200 200)"/></g>
+<g filter="url(#relief)"><circle cx="200" cy="200" r="54" fill="#FFFBF4"/></g>
+<circle cx="200" cy="200" r="42" fill="#F4E8D6"/>
+<g filter="url(#relief)"><circle cx="200" cy="200" r="30" fill="#FFFBF4"/></g>
+<circle cx="200" cy="200" r="13" fill="#F4E8D6" stroke="#E3D0B6"/>
+</svg>
+  </div>
+</section>
 
-  <div class="strip">
-    <div class="strip-inner">
-      <div class="strip-item"><span class="num">1</span><span class="lab">Artisan — un seul interlocuteur</span></div>
-      <div class="strip-item"><span class="num">32</span><span class="lab">Gers &amp; alentours</span></div>
-      <div class="strip-item"><span class="num">4</span><span class="lab">Métiers maîtrisés</span></div>
-      <div class="strip-item"><span class="num">0€</span><span class="lab">Devis gratuit</span></div>
+<section class="section section-stone">
+  <div class="wrap split">
+    <div>
+      <h2>Un seul interlocuteur pour votre second œuvre</h2>
+      <p>Vous échangez avec la personne qui fait le travail. Pas d’intermédiaire entre vos attentes et le chantier.</p>
+    </div>
+    <ul class="trades">
+      <li><a href="services.html#platrerie-staff"><strong>Plâtrerie et staff décoratif</strong><span>Rosaces, corniches, moulures, bas-reliefs, consoles de cheminée.</span></a></li>
+      <li><a href="services.html#patrimoine"><strong>Patrimoine et décors anciens</strong><span>Restauration de plafonds, de frises et de rosaces, en lien avec les Bâtiments de France sur les monuments classés.</span></a></li>
+      <li><a href="services.html#placo"><strong>Placo et cloisons</strong><span>Cloisons, doublages, faux plafonds et finitions.</span></a></li>
+      <li><a href="services.html#isolation"><strong>Isolation</strong><span>Murs, combles et rampants, isolation thermique et phonique.</span></a></li>
+      <li><a href="services.html#chaux"><strong>Mortier de chaux et fausse pierre</strong><span>Enduits minéraux et encadrements d’ouvertures.</span></a></li>
+      <li><a href="services.html#carrelage"><strong>Carrelage</strong><span>Sols et murs, salles de bain, cuisines, terrasses.</span></a></li>
+      <li><a href="services.html#peinture"><strong>Peinture</strong><span>Préparation des supports, intérieur et extérieur.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap press">
+    <div>
+      <h2>Le staff, ma spécialité</h2>
+      <p>Je suis plâtrier-staffeur et sculpteur de bas-reliefs. Rosaces, corniches, consoles de cheminée : je crée des décors sur mesure et je restaure ceux que le temps a abîmés.</p>
+      <p>Chaque pièce est sculptée à la main, d’après le projet et le style de la pièce.</p>
+      <p><a href="realisations.html#bas-reliefs">Voir les bas-reliefs</a></p>
+    </div>
+    <figure class="press-media">
+      <img src="images/accueil/console-sculptee.jpg" alt="Cartouche sculpté d’une console de cheminée" width="1100" height="398" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="section section-stone">
+  <div class="wrap press">
+    <figure class="press-media press-paper">
+      <img src="images/accueil/presse-depeche.jpg" alt="Article de La Dépêche du Dimanche consacré au savoir-faire artisanal d’Éric Pellegrino" width="825" height="1100" loading="lazy">
+      <figcaption>La Dépêche du Dimanche, édition Condom Armagnac</figcaption>
+    </figure>
+    <div>
+      <h2>Dans la presse</h2>
+      <p>La Dépêche du Dimanche a consacré un article à mon parcours et à mon travail, notamment à mes consoles de cheminée sculptées.</p>
+      <p>Il revient sur mon apprentissage du métier de plâtrier à l’ancienne, sur la restauration et sur mon attachement aux savoir-faire traditionnels.</p>
     </div>
   </div>
+</section>
 
-  <section id="savoir-faire">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Nos savoir-faire</span>
-        <h2>Une rénovation complète, sans multiplier les artisans</h2>
-        <p>Du gros œuvre intérieur aux finitions, chaque prestation est pensée pour s'articuler avec les autres — un seul chantier, une seule équipe.</p>
-      </div>
-      <div class="metier-grid">
-        <a class="metier-card" href="services.html#platrerie">
-          <div class="icon"><img src="images/lanne-salon-05-cheminee-caissons.jpg" alt="Plafond à caissons et cheminée restaurés" loading="lazy"></div>
-          <h3>Plâtrerie &amp; placo</h3>
-          <p>Cloisons, doublages, faux plafonds et finitions en plâtre ou en plaques de plâtre.</p>
-          <span class="go">Voir la prestation →</span>
-        </a>
-        <a class="metier-card" href="services.html#isolation">
-          <div class="icon"><img src="images/isolation-05-vue-ensemble.jpg" alt="Isolation sous charpente et habillage de plafond" loading="lazy"></div>
-          <h3>Isolation</h3>
-          <p>Isolation thermique et phonique des murs, combles et planchers selon les normes en vigueur.</p>
-          <span class="go">Voir la prestation →</span>
-        </a>
-        <a class="metier-card" href="services.html#carrelage">
-          <div class="icon"><img src="images/sdb-04-douche-italienne.jpg" alt="Salle de bain avec douche italienne et carrelage" loading="lazy"></div>
-          <h3>Carrelage</h3>
-          <p>Pose collée, joints, découpes et finitions sur sols et murs, même en rénovation.</p>
-          <span class="go">Voir la prestation →</span>
-        </a>
-        <a class="metier-card" href="services.html#peinture">
-          <div class="icon">
-            <svg viewBox="0 0 220 150" width="100%" height="150" role="img" aria-label="Application de peinture">
-              <rect x="10" y="10" width="200" height="130" fill="#EDE3CC"/>
-              <rect x="10" y="10" width="130" height="130" fill="#BE5A2E" opacity=".9"/>
-              <rect x="128" y="10" width="14" height="130" fill="#8A3D1D"/>
-            </svg>
-          </div>
-          <h3>Peinture</h3>
-          <p>Préparation des supports, peinture intérieure et extérieure, ravalement et finitions.</p>
-          <span class="go">Voir la prestation →</span>
-        </a>
-      </div>
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>Chantiers de patrimoine</h2>
     </div>
-  </section>
-
-  <section class="gallery-section" id="galerie">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Galerie photo</span>
-        <h2>Quelques chantiers et finitions réalisées</h2>
-      </div>
-      <div class="gallery-grid">
-        <figure class="gallery-card large"><img src="images/lanne-salon-05-cheminee-caissons.jpg" alt="Salon rénové avec plafond à caissons et cheminée" loading="lazy"><figcaption>Plafond à caissons</figcaption></figure>
-        <figure class="gallery-card"><img src="images/isolation-05-vue-ensemble.jpg" alt="Isolation sous charpente et habillage de plafond" loading="lazy"><figcaption>Isolation sous charpente</figcaption></figure>
-        <figure class="gallery-card"><img src="images/sdb-04-douche-italienne.jpg" alt="Salle de bain avec douche italienne" loading="lazy"><figcaption>Douche italienne</figcaption></figure>
-        <figure class="gallery-card"><img src="images/sejour-04-vue-ensemble.jpg" alt="Séjour rénové" loading="lazy"><figcaption>Rénovation de séjour</figcaption></figure>
-        <figure class="gallery-card"><img src="images/fondelin-05-rosace-restauree.jpg" alt="Restauration d'une rosace en plâtre" loading="lazy"><figcaption>Restauration de rosace</figcaption></figure>
-        <figure class="gallery-card"><img src="images/sculpture-console-01-cartouche.jpg" alt="Console sculptée en plâtre" loading="lazy"><figcaption>Console sculptée</figcaption></figure>
-        <figure class="gallery-card"><img src="images/labarthe-staff-01-moulures-atelier.jpg" alt="Fabrication de moulures en plâtre en atelier" loading="lazy"><figcaption>Moulures sur mesure</figcaption></figure>
-        <figure class="gallery-card"><img src="images/maison-04-cuisine.jpg" alt="Travail de finition et d'habillage dans une cuisine" loading="lazy"><figcaption>Finition intérieure</figcaption></figure>
-      </div>
-      <div class="gallery-link">
-        <p>Voir l'album photo complet</p>
-        <a class="btn btn-primary" href="https://goo.gl/photos/kuyufdh3DnA1XkJJ9" target="_blank" rel="noopener noreferrer">Album Google Photos</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="pourquoi">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Pourquoi nous choisir</span>
-        <h2>Un artisan du détail, au service de votre intérieur</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-item"><span class="tag">Expertise</span><h3>Un savoir-faire maîtrisé</h3><p>Plâtrerie, moulures, faux plafonds et finitions : chaque étape est pensée avec soin.</p></div>
-        <div class="why-item"><span class="tag">Sur mesure</span><h3>Des créations adaptées</h3><p>Chaque profil est imaginé pour s'intégrer à votre espace et à votre architecture.</p></div>
-        <div class="why-item"><span class="tag">Fiabilité</span><h3>Un chantier propre et soigné</h3><p>Des travaux réalisés dans le respect des normes, avec une finition durable et élégante.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="quote-section">
-    <div class="quote-inner">
-      <span class="quote-mark">"</span>
-      <div>
-        <span class="eyebrow">Presse</span>
-        <h2>Portrait dans La Dépêche du Dimanche</h2>
-        <p>Formé à la tradition artisanale, Eric Pellegrino a développé un savoir-faire rare dans le second œuvre : la plâtrerie, les moulures et les finitions décoratives.</p>
-        <p>Son approche repose sur le goût du détail, la précision de l'exécution et un travail soigné sur mesure.</p>
-        <div class="quote-source">La Dépêche du Dimanche — édition Condom Armagnac</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-github">
-    <div class="wrap">
-      <div class="project-box">
-        <span class="eyebrow">Projet GitHub</span>
-        <h3>Pellegrino B8C0B2 Renovation</h3>
-        <p>Suivi du projet de rénovation et des fichiers associés.</p>
-        <a class="btn btn-primary" href="https://github.com/PELLEGRINO132/pellegrino-b8c0b2renovation" target="_blank" rel="noopener noreferrer">
-          Voir le dépôt
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-band">
-    <div class="wrap">
-      <div>
-        <h2>Un projet de rénovation ?<br>Parlons-en.</h2>
-        <p>Déplacement et devis gratuits dans tout le Gers.</p>
-      </div>
-      <div class="ctas">
-        <a class="btn btn-primary" href="contact.html">Demander un devis</a>
-        <a class="btn btn-ghost-light mono" href="tel:0648061892">06 48 06 18 92</a>
-      </div>
+    <div>
+      <p>J’interviens sur des monuments historiques classés, en lien avec les Bâtiments de France, et sur des demeures anciennes comme les châteaux de Labarthe et de Fondelin. Sur ces chantiers, les matériaux, les profils et les gestes d’origine comptent autant que le résultat.</p>
+      <p>J’ai appris le métier de plâtrier-staffeur auprès de mon père : cette transmission guide encore ma façon de travailler.</p>
+      <p><a href="realisations.html#restauration-rosace">Voir la restauration d’une rosace</a></p>
     </div>
   </div>
+</section>
 
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <h4>Pellegrino Rénovation</h4>
-          <p>Entreprise individuelle de second œuvre — plâtrerie, isolation, carrelage et peinture.<br>Basée à Condom, intervient dans tout le Gers.</p>
-        </div>
-        <div>
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html">Prestations</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Coordonnées</h4>
-          <ul>
-            <li>9 rue Grichet, 32100 Condom</li>
-            <li class="mono">06 48 06 18 92</li>
-            <li>SIRET 421 291 006 00029</li>
-          </ul>
-        </div>
+<section class="section section-ink">
+  <div class="wrap">
+    <h2>Un projet à Condom ou dans le Gers ?</h2>
+    <p class="lead">Déplacement et devis gratuits dans tout le Gers. Décrivez votre projet en quelques lignes, je vous rappelle.</p>
+    <div class="actions">
+      <a class="btn btn-light" href="devis.html">Demander un devis</a>
+      <a class="btn btn-ghost-light" href="tel:+33648061892">Appeler le 06 48 06 18 92</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Pellegrino Rénovation</h2>
+        <p>Plâtrerie, staff décoratif, placo, isolation, carrelage et peinture à Condom, dans le Gers.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Pellegrino Rénovation — EI, TVA non applicable</span>
-        <span>Site conçu pour un artisan du Gers</span>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li>9 rue Grichet, 32100 Condom</li>
+          <li><a href="tel:+33648061892">06 48 06 18 92</a></li>
+          <li><a href="mailto:ericpellegrino@live.fr">ericpellegrino@live.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul>
+          <li><a href="services.html">Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+          <li><a href="contact.html#mentions">Mentions légales</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <p class="foot-bottom">© 2026 Pellegrino Rénovation, entreprise individuelle. SIRET 421 291 006 00029. TVA non applicable, article 293 B du CGI.</p>
+  </div>
+</footer>
 </body>
 </html>

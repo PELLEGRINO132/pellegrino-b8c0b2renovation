@@ -1,243 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nos prestations — Pellegrino Rénovation</title>
-  <meta name="description" content="Plâtrerie, isolation, carrelage, peinture, restaurations de moulures et décorations de plafond." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --chaux:#F4EEE0; --chaux-warm:#EDE3CC; --ardoise:#24262A; --ardoise-soft:#4A4D52; --terre-cuite:#BE5A2E; --terre-cuite-dark:#8A3D1D; --pierre:#A79878; --pierre-light:#D9CFB8; --sauge:#5F6E52; --blanc:#FFFCF6; --ombre:0 18px 40px -18px rgba(36,38,42,.35); --rayon:2px;
-    }
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0; background:var(--chaux); color:var(--ardoise); font-family:"Work Sans", sans-serif; line-height:1.6; font-size:16px; -webkit-font-smoothing:antialiased;}
-    img{max-width:100%; display:block;}
-    a{text-decoration:none; color:inherit;}
-    h1,h2,h3,h4{margin:0 0 .55em; font-family:"Fraunces", serif; line-height:1.08; letter-spacing:-.02em; color:var(--ardoise); font-weight:600;}
-    p{margin:0;}
-    .mono{font-family:"IBM Plex Mono", monospace; letter-spacing:.04em;}
-    .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
-    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:15px 26px; border-radius:2px; font-weight:600; font-size:.95rem; transition:all .2s ease; border:1px solid transparent; cursor:pointer; text-decoration:none;}
-    .btn-primary{background:var(--terre-cuite); color:var(--blanc);}
-    .btn-primary:hover{background:var(--terre-cuite-dark); transform:translateY(-1px);}
-    .btn-ghost-light{border-color:rgba(255,252,246,.6); background:transparent; color:var(--blanc);}
-    .btn-ghost-light:hover{background:var(--blanc); color:var(--terre-cuite-dark);}
-    .site-nav{position:sticky; top:0; z-index:50; background:rgba(244,238,224,.92); backdrop-filter:blur(8px); border-bottom:1px solid rgba(36,38,42,.08);}
-    .nav-inner{max-width:1180px; margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
-    .brand{display:flex; align-items:baseline; gap:8px; font-family:"Fraunces", serif; font-size:1.2rem; font-weight:600; color:var(--ardoise);}
-    .brand small{font-family:"IBM Plex Mono", monospace; font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark);}
-    .nav-links{display:flex; align-items:center; gap:30px; font-size:.96rem; font-weight:500;}
-    .nav-links a{position:relative; color:var(--ardoise-soft); padding:4px 0;}
-    .nav-links a:hover{color:var(--terre-cuite-dark);}
-    .nav-links a.active{color:var(--ardoise);}
-    .nav-links a.active::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--terre-cuite);}
-    .nav-cta{background:var(--terre-cuite); color:var(--blanc)!important; padding:12px 20px; border-radius:2px; font-weight:600; white-space:nowrap;}
-    .nav-cta:hover{background:var(--terre-cuite-dark);}
-    .nav-toggle{display:none;}
-    .burger{display:none;}
-    @media (max-width:860px){
-      .nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38,42,.08); opacity:0; pointer-events:none; transform:translateY(-8px); transition:opacity .2s ease, transform .2s ease;}
-      .nav-toggle:checked ~ .nav-links{opacity:1; pointer-events:auto; transform:translateY(0);}
-      .nav-links a{width:100%; padding:14px 0; border-bottom:1px solid rgba(36,38,42,.08);}
-      .nav-links .nav-cta{width:100%; margin-top:12px; text-align:center; border-bottom:none;}
-      .burger{display:flex; flex-direction:column; gap:5px; width:28px; cursor:pointer;}
-      .burger span{display:block; background:var(--ardoise); height:2px;}
-      .nav-toggle:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-      .nav-toggle:checked ~ .burger span:nth-child(2){opacity:0;}
-      .nav-toggle:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    }
-    .page-banner{background:var(--chaux-warm); border-bottom:1px solid rgba(36,38,42,.1); padding:56px 0 42px;}
-    .page-banner h1{font-size:clamp(2.2rem, 4vw, 3rem); margin-bottom:12px; max-width:16ch;}
-    .page-banner p{max-width:56ch; color:var(--ardoise-soft); font-size:1.05rem;}
-    .service-row{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center; padding:56px 0; border-bottom:1px solid rgba(36,38,42,.1);}
-    .service-row:last-child{border-bottom:none;}
-    .service-row.reverse{grid-template-columns:1.1fr .9fr;}
-    .service-row.reverse .service-visual{order:2;}
-    .service-num{display:block; font-family:"IBM Plex Mono", monospace; color:var(--pierre); margin-bottom:10px; font-size:.75rem; letter-spacing:.08em;}
-    .service-row h2{font-size:1.8rem; margin-bottom:14px;}
-    .service-row p{color:var(--ardoise-soft); max-width:54ch;}
-    .service-row ul{list-style:none; padding:0; margin:18px 0 0; display:flex; flex-direction:column; gap:8px;}
-    .service-row ul li{position:relative; padding-left:20px; color:var(--ardoise-soft);}
-    .service-row ul li::before{content:""; position:absolute; left:0; top:10px; width:8px; height:1px; background:var(--terre-cuite-dark);}
-    .dtu-tag{display:inline-block; margin-top:18px; background:rgba(190,90,46,.12); color:var(--terre-cuite-dark); font-family:"IBM Plex Mono", monospace; font-size:.72rem; letter-spacing:.04em; padding:6px 12px;}
-    .service-visual{background:var(--blanc); border:1px solid rgba(36,38,42,.08); border-radius:6px; box-shadow:var(--ombre); padding:24px 20px 18px;}
-    .service-visual img{width:100%; height:270px; object-fit:cover; border-radius:4px; display:block;}
-    .service-visual .cap{display:flex; justify-content:space-between; align-items:baseline; border-top:1px dashed var(--pierre-light); margin-top:14px; padding-top:12px; font-family:"IBM Plex Mono", monospace; font-size:.68rem; letter-spacing:.06em; color:var(--ardoise-soft);}
-    .cta-band{background:var(--ardoise); color:var(--blanc); padding:64px 0; margin-top:20px;}
-    .cta-band .wrap{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
-    .cta-band h2{color:var(--blanc); font-size:clamp(1.8rem,3vw,2.4rem); max-width:16ch;}
-    .cta-band p{color:rgba(255,252,246,.72); margin-top:8px; max-width:38ch;}
-    .cta-band .ctas{display:flex; flex-wrap:wrap; gap:14px;}
-    footer{background:var(--chaux-warm); border-top:1px solid rgba(36,38,42,.1); padding:52px 0 28px;}
-    .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:32px;}
-    .footer-grid h4{margin-bottom:14px; font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ardoise-soft);}
-    .footer-grid p, .footer-grid li{color:var(--ardoise-soft); font-size:.93rem;}
-    .footer-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;}
-    .footer-bottom{border-top:1px solid rgba(36,38,42,.12); padding-top:18px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:"IBM Plex Mono", monospace; font-size:.72rem; color:var(--ardoise-soft);}
-    @media (max-width:860px){.service-row, .service-row.reverse{grid-template-columns:1fr;} .service-row.reverse .service-visual{order:0;} .footer-grid{grid-template-columns:1fr;}}
-    @media (max-width:560px){.nav-inner{padding:14px 20px;} .wrap{padding:0 20px;} .cta-band .wrap{align-items:flex-start;}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prestations — Pellegrino Rénovation, Condom (Gers)</title>
+<meta name="description" content="Plâtrerie et staff décoratif, restauration de décors anciens, placo, isolation, mortier de chaux, carrelage et peinture dans tout le Gers.">
+<meta name="theme-color" content="#B5541A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Pellegrino Rénovation">
+<meta property="og:title" content="Prestations — Pellegrino Rénovation, Condom (Gers)">
+<meta property="og:description" content="Plâtrerie et staff décoratif, restauration de décors anciens, placo, isolation, mortier de chaux, carrelage et peinture dans tout le Gers.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.fig[hidden],.press-media[hidden],.gallery-group[hidden]{display:block}</style></noscript>
+<script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Pellegrino <small>Rénovation</small></a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <nav class="nav-links">
-        <a href="index.html">Accueil</a>
-        <a class="active" href="services.html">Prestations</a>
-        <a href="realisations.html">Réalisations</a>
-        <a href="contact.html">Contact</a>
-        <a class="nav-cta" href="contact.html">Demander un devis</a>
-      </nav>
-      <label class="burger" for="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
-    </div>
-  </header>
-
-  <div class="page-banner">
-    <div class="wrap">
-      <h1>Nos prestations</h1>
-      <p>Six corps de métier, une seule équipe. Chaque intervention est chiffrée précisément et réalisée dans le respect des normes en vigueur.</p>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="favicon.svg" alt="" width="36" height="36"><span>Pellegrino Rénovation</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html" aria-current="page">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary btn-small" href="devis.html">Demander un devis</a>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+<section class="page-head">
+  <div class="wrap">
+    <h1>Prestations</h1>
+    <p class="lead">Du décor sculpté aux finitions, chaque poste est réalisé par le même artisan. Chaque intervention est chiffrée précisément.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:1rem">
+  <div class="wrap rows">
+  <div class="row" id="platrerie-staff">
+    <h2>Plâtrerie et staff décoratif</h2>
+    <div>
+      <p>Mon métier d’origine. Je crée des décors en plâtre et en staff, sur mesure, pour des intérieurs neufs ou anciens. Chaque profil est adapté au style de la pièce.</p>
+      <ul class="ticks"><li>Relevé ou création de profil sur mesure</li><li>Fabrication en atelier, pose et finitions</li><li>Rosaces, corniches, frises et moulures</li><li>Bas-reliefs et consoles de cheminée sculptés</li><li>Reproduction de moulures dégradées</li><li>Enduit plâtre traditionnel</li></ul>
+      <figure class="row-photo"><img src="images/prestations/platrerie-staff.jpg" alt="Rosace en plâtre restaurée" width="1000" height="750" loading="lazy" decoding="async"></figure>
     </div>
   </div>
-
-  <section>
-    <div class="wrap">
-      <div class="service-row" id="platrerie">
-        <div>
-          <span class="service-num mono">01</span>
-          <h2>Plâtrerie &amp; placo</h2>
-          <p>Cloisons de distribution, doublages isolants, faux plafonds et finitions : la structure intérieure de votre logement, réalisée en plâtre traditionnel ou en plaques de plâtre.</p>
-          <ul>
-            <li>Cloisons de distribution et de doublage</li>
-            <li>Faux plafonds et habillages</li>
-            <li>Traitement des joints et finitions prêtes à peindre</li>
-            <li>Réparation de fissures et reprises d’enduit</li>
-            <li>Restauration de moulures, corniches et rosaces en staff</li>
-          </ul>
-          <span class="dtu-tag">Réf. DTU 25.41 / 25.42</span>
-        </div>
-        <div class="service-visual"><img src="images/fondelin-05-rosace-restauree.jpg" alt="Restauration d'une rosace en plâtre" loading="lazy"><div class="cap"><span>RESTAURATION — ROSACE</span><span>Château de Fondelin</span></div></div>
-      </div>
-
-      <div class="service-row reverse" id="corniches">
-        <div>
-          <span class="service-num mono">02</span>
-          <h2>Création de corniches et frises en plâtre</h2>
-          <p>La création de corniches et de frises en plâtre permet de restaurer ou d’embellir un intérieur avec élégance, précision et authenticité. Chaque profil est réalisé sur mesure selon le style architectural de la pièce, afin d’intégrer harmonieusement les volumes et les finitions existantes.</p>
-          <ul>
-            <li>Relevé ou création de profil sur mesure</li>
-            <li>Fabrication en atelier</li>
-            <li>Pose et finitions soignées</li>
-            <li>Restauration de pièces anciennes</li>
-            <li>Reproduction de moulures dégradées</li>
-          </ul>
-          <span class="dtu-tag">Travail décoratif artisanal</span>
-        </div>
-        <div class="service-visual"><img src="images/labarthe-staff-01-moulures-atelier.jpg" alt="Fabrication de corniches et frises en plâtre" loading="lazy"><div class="cap"><span>FABRICATION — ATELIER</span><span>Corniches sur mesure</span></div></div>
-      </div>
-
-      <div class="service-row" id="isolation">
-        <div>
-          <span class="service-num mono">03</span>
-          <h2>Isolation</h2>
-          <p>Isolation thermique et phonique des murs, combles et planchers, pour un logement plus confortable et plus économe en énergie.</p>
-          <ul>
-            <li>Isolation des murs par l’intérieur</li>
-            <li>Isolation des combles et rampants</li>
-            <li>Isolation phonique entre pièces ou niveaux</li>
-            <li>Conseils sur les matériaux adaptés à votre budget</li>
-          </ul>
-          <span class="dtu-tag">Réf. DTU 45</span>
-        </div>
-        <div class="service-visual"><img src="images/isolation-05-vue-ensemble.jpg" alt="Isolation sous charpente et habillage de plafond" loading="lazy"><div class="cap"><span>ISOLATION — PLAFOND RAMPANT</span><span>Sous charpente</span></div></div>
-      </div>
-
-      <div class="service-row reverse" id="carrelage">
-        <div>
-          <span class="service-num mono">04</span>
-          <h2>Carrelage</h2>
-          <p>Pose de carrelage au sol et au mur pour salles de bain, cuisines, terrasses ou pièces à vivre, avec un travail soigné des découpes et des joints.</p>
-          <ul>
-            <li>Pose collée sol et mur</li>
-            <li>Salles de bain, cuisines, terrasses</li>
-            <li>Faïence et carrelage grand format</li>
-            <li>Reprises et remplacements ponctuels</li>
-          </ul>
-          <span class="dtu-tag">Réf. DTU 52.2</span>
-        </div>
-        <div class="service-visual"><img src="images/sdb-04-douche-italienne.jpg" alt="Douche italienne carrelée" loading="lazy"><div class="cap"><span>CARRELAGE — DOUCHE ITALIENNE</span><span>Salle de bain</span></div></div>
-      </div>
-
-      <div class="service-row" id="peinture">
-        <div>
-          <span class="service-num mono">05</span>
-          <h2>Peinture</h2>
-          <p>Préparation minutieuse des supports puis application de peintures intérieures et extérieures, pour une finition durable et régulière.</p>
-          <ul>
-            <li>Préparation et rebouchage des supports</li>
-            <li>Peintures intérieures et extérieures</li>
-            <li>Ravalement et peintures de façade</li>
-            <li>Conseils teintes et matières</li>
-          </ul>
-          <span class="dtu-tag">Réf. DTU 59.1</span>
-        </div>
-        <div class="service-visual">
-          <svg viewBox="0 0 220 150" width="100%" height="150" role="img" aria-label="Application de peinture">
-            <rect x="10" y="10" width="200" height="130" fill="#EDE3CC"/>
-            <rect x="10" y="10" width="130" height="130" fill="#BE5A2E" opacity=".9"/>
-            <rect x="128" y="10" width="14" height="130" fill="#8A3D1D"/>
-          </svg>
-          <div class="cap"><span>PEINTURE — FINITION</span><span>Intérieur &amp; extérieur</span></div>
-        </div>
-      </div>
+  <div class="row" id="patrimoine">
+    <h2>Patrimoine et décors anciens</h2>
+    <div>
+      <p>Je restaure les plafonds, frises et rosaces en plâtre, et j’interviens sur des monuments historiques classés en lien avec les Bâtiments de France.</p>
+      <ul class="ticks"><li>Restauration de rosaces, de corniches et de frises</li><li>Reprise de plafonds en plâtre traditionnel</li><li>Restitution de pièces anciennes</li><li>Respect des formes et des matériaux d’origine</li></ul>
+      <figure class="row-photo"><img src="images/prestations/patrimoine.jpg" alt="Plafond ancien restauré" width="1000" height="750" loading="lazy" decoding="async"></figure>
     </div>
-  </section>
+  </div>
+  <div class="row" id="placo">
+    <h2>Placo et cloisons</h2>
+    <div>
+      <p>La structure intérieure de votre logement, en plâtre traditionnel ou en plaques de plâtre.</p>
+      <ul class="ticks"><li>Cloisons de distribution et de doublage</li><li>Faux plafonds et habillages</li><li>Traitement des joints, finitions prêtes à peindre</li><li>Réparation de fissures et reprises d’enduit</li></ul>
+      <figure class="row-photo"><img src="images/prestations/placo.jpg" alt="Plafond à caissons en plaques de plâtre" width="1000" height="750" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+  <div class="row" id="isolation">
+    <h2>Isolation</h2>
+    <div>
+      <p>Isolation thermique et phonique, pour un logement plus confortable et plus économe en énergie.</p>
+      <ul class="ticks"><li>Isolation des murs par l’intérieur</li><li>Isolation des combles et des rampants</li><li>Isolation phonique entre pièces ou niveaux</li><li>Conseils sur les matériaux adaptés à votre budget</li></ul>
+      <figure class="row-photo"><img src="images/prestations/isolation.jpg" alt="Isolation sous charpente et habillage de plafond" width="1000" height="750" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+  <div class="row" id="chaux">
+    <h2>Mortier de chaux et fausse pierre</h2>
+    <div>
+      <p>Un travail de la matière pour obtenir un aspect minéral, de la préparation du support au rendu final.</p>
+      <ul class="ticks"><li>Enduits au mortier de chaux</li><li>Aspect fausse pierre</li><li>Encadrements de portes et de fenêtres</li></ul>
+      <figure class="row-photo"><img src="images/prestations/chaux.jpg" alt="Ouverture traitée au mortier de chaux, aspect fausse pierre" width="1000" height="747" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+  <div class="row" id="carrelage">
+    <h2>Carrelage</h2>
+    <div>
+      <p>Pose soignée, avec une attention particulière aux découpes et aux joints, même en rénovation.</p>
+      <ul class="ticks"><li>Pose collée sol et mur</li><li>Salles de bain, cuisines, terrasses</li><li>Faïence et carrelage grand format</li><li>Reprises et remplacements ponctuels</li></ul>
+      <figure class="row-photo"><img src="images/prestations/carrelage.jpg" alt="Douche à l’italienne carrelée" width="1000" height="750" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+  <div class="row" id="peinture">
+    <h2>Peinture</h2>
+    <div>
+      <p>Une finition durable et régulière, qui commence par une bonne préparation des supports.</p>
+      <ul class="ticks"><li>Préparation et rebouchage des supports</li><li>Peintures intérieures et extérieures</li><li>Ravalement et peintures de façade</li><li>Conseils sur les teintes et les matières</li></ul>
+      
+    </div>
+  </div>
+  </div>
+</section>
 
-  <div class="cta-band">
-    <div class="wrap">
+<section class="section section-stone">
+  <div class="wrap">
+    <h2>Comment on travaille ensemble</h2>
+    <ol class="steps">
+      <li><h3>Premier échange</h3><p>Par téléphone ou via le formulaire : vous me décrivez votre projet.</p></li>
+      <li><h3>Visite sur place</h3><p>Je regarde l’existant et je prends les mesures. Le déplacement est gratuit dans tout le Gers.</p></li>
+      <li><h3>Devis gratuit</h3><p>Vous recevez un devis écrit et détaillé, poste par poste.</p></li>
+      <li><h3>Chantier</h3><p>Les travaux sont réalisés par moi, selon ce qui a été convenu.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-ink">
+  <div class="wrap">
+    <h2>Un de ces travaux vous concerne ?</h2>
+    <p class="lead">Décrivez votre projet, je reviens vers vous avec un devis détaillé. Déplacement et devis gratuits dans tout le Gers.</p>
+    <div class="actions">
+      <a class="btn btn-light" href="devis.html">Demander un devis</a>
+      <a class="btn btn-ghost-light" href="tel:+33648061892">Appeler le 06 48 06 18 92</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
       <div>
-        <h2>Un de ces travaux vous concerne ?</h2>
-        <p>Décrivez votre projet, je reviens vers vous avec un devis détaillé.</p>
+        <h2>Pellegrino Rénovation</h2>
+        <p>Plâtrerie, staff décoratif, placo, isolation, carrelage et peinture à Condom, dans le Gers.</p>
       </div>
-      <div class="ctas">
-        <a class="btn btn-primary" href="contact.html">Demander un devis</a>
-        <a class="btn btn-ghost-light mono" href="tel:0648061892">06 48 06 18 92</a>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li>9 rue Grichet, 32100 Condom</li>
+          <li><a href="tel:+33648061892">06 48 06 18 92</a></li>
+          <li><a href="mailto:ericpellegrino@live.fr">ericpellegrino@live.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul>
+          <li><a href="services.html">Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+          <li><a href="contact.html#mentions">Mentions légales</a></li>
+        </ul>
       </div>
     </div>
+    <p class="foot-bottom">© 2026 Pellegrino Rénovation, entreprise individuelle. SIRET 421 291 006 00029. TVA non applicable, article 293 B du CGI.</p>
   </div>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <h4>Pellegrino Rénovation</h4>
-          <p>Entreprise individuelle de second œuvre — plâtrerie, isolation, carrelage et peinture.<br>Basée à Condom, intervient dans tout le Gers.</p>
-        </div>
-        <div>
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html">Prestations</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Coordonnées</h4>
-          <ul>
-            <li>9 rue Grichet, 32100 Condom</li>
-            <li class="mono">06 48 06 18 92</li>
-            <li>SIRET 421 291 006 00029</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Pellegrino Rénovation — EI, TVA non applicable</span><span>Site conçu pour un artisan du Gers</span></div>
-    </div>
-  </footer>
+</footer>
 </body>
 </html>

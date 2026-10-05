@@ -1,198 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Pellegrino Rénovation</title>
-  <meta name="description" content="Contactez Pellegrino Rénovation à Condom (Gers) pour un devis gratuit : plâtrerie, isolation, carrelage, peinture." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--chaux:#F4EEE0; --chaux-warm:#EDE3CC; --ardoise:#24262A; --ardoise-soft:#4A4D52; --terre-cuite:#BE5A2E; --terre-cuite-dark:#8A3D1D; --pierre:#A79878; --pierre-light:#D9CFB8; --sauge:#5F6E52; --blanc:#FFFCF6; --ombre:0 18px 40px -18px rgba(36,38,42,.35); --rayon:2px;}
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0; background:var(--chaux); color:var(--ardoise); font-family:"Work Sans", sans-serif; line-height:1.6; font-size:16px; -webkit-font-smoothing:antialiased;}
-    img{max-width:100%; display:block;}
-    a{text-decoration:none; color:inherit;}
-    h1,h2,h3,h4{margin:0 0 .55em; font-family:"Fraunces", serif; line-height:1.08; letter-spacing:-.02em; color:var(--ardoise); font-weight:600;}
-    p{margin:0;}
-    .mono{font-family:"IBM Plex Mono", monospace; letter-spacing:.04em;}
-    .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
-    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:15px 26px; border-radius:2px; font-weight:600; font-size:.95rem; transition:all .2s ease; border:1px solid transparent; cursor:pointer; text-decoration:none;}
-    .btn-primary{background:var(--terre-cuite); color:var(--blanc);}
-    .btn-primary:hover{background:var(--terre-cuite-dark); transform:translateY(-1px);}
-    .site-nav{position:sticky; top:0; z-index:50; background:rgba(244,238,224,.92); backdrop-filter:blur(8px); border-bottom:1px solid rgba(36,38,42,.08);}
-    .nav-inner{max-width:1180px; margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
-    .brand{display:flex; align-items:baseline; gap:8px; font-family:"Fraunces", serif; font-size:1.2rem; font-weight:600; color:var(--ardoise);}
-    .brand small{font-family:"IBM Plex Mono", monospace; font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; color:var(--terre-cuite-dark);}
-    .nav-links{display:flex; align-items:center; gap:30px; font-size:.96rem; font-weight:500;}
-    .nav-links a{position:relative; color:var(--ardoise-soft); padding:4px 0;}
-    .nav-links a:hover{color:var(--terre-cuite-dark);}
-    .nav-links a.active{color:var(--ardoise);}
-    .nav-links a.active::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--terre-cuite);}
-    .nav-cta{background:var(--terre-cuite); color:var(--blanc)!important; padding:12px 20px; border-radius:2px; font-weight:600; white-space:nowrap;}
-    .nav-cta:hover{background:var(--terre-cuite-dark);}
-    .nav-toggle{display:none;}
-    .burger{display:none;}
-    @media (max-width:860px){.nav-links{position:fixed; inset:64px 0 auto 0; padding:8px 28px 28px; background:rgba(244,238,224,.98); flex-direction:column; align-items:flex-start; gap:0; border-top:1px solid rgba(36,38,42,.08); opacity:0; pointer-events:none; transform:translateY(-8px); transition:opacity .2s ease, transform .2s ease;} .nav-toggle:checked ~ .nav-links{opacity:1; pointer-events:auto; transform:translateY(0);} .nav-links a{width:100%; padding:14px 0; border-bottom:1px solid rgba(36,38,42,.08);} .nav-links .nav-cta{width:100%; margin-top:12px; text-align:center; border-bottom:none;} .burger{display:flex; flex-direction:column; gap:5px; width:28px; cursor:pointer;} .burger span{display:block; background:var(--ardoise); height:2px;} .nav-toggle:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);} .nav-toggle:checked ~ .burger span:nth-child(2){opacity:0;} .nav-toggle:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}}
-    .page-banner{background:var(--chaux-warm); border-bottom:1px solid rgba(36,38,42,.1); padding:56px 0 42px;}
-    .page-banner h1{font-size:clamp(2.2rem, 4vw, 3rem); margin-bottom:12px; max-width:16ch;}
-    .page-banner p{max-width:56ch; color:var(--ardoise-soft); font-size:1.05rem;}
-    .contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:64px; padding:64px 0 32px;}
-    .info-block{margin-bottom:28px;}
-    .info-block h4{font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--terre-cuite-dark); margin-bottom:8px; font-weight:500;}
-    .info-block p, .info-block a{font-size:1.02rem; color:var(--ardoise);}
-    .map-card{background:var(--blanc); border:1px solid rgba(36,38,42,.1); border-radius:6px; padding:20px; box-shadow:var(--ombre);}
-    .map-card .cap{font-family:"IBM Plex Mono", monospace; font-size:.7rem; color:var(--ardoise-soft); margin-top:10px;}
-    form{background:var(--blanc); border:1px solid rgba(36,38,42,.1); border-radius:6px; padding:34px; box-shadow:var(--ombre);}
-    .form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
-    .field{display:flex; flex-direction:column; gap:7px;}
-    .field.full{grid-column:1/-1;}
-    label{font-size:.82rem; font-weight:500; color:var(--ardoise-soft);}
-    input, select, textarea{border:1px solid var(--pierre-light); border-radius:3px; padding:12px 14px; font-family:"Work Sans", sans-serif; font-size:.95rem; background:var(--chaux); color:var(--ardoise);}
-    input:focus, select:focus, textarea:focus{outline:2px solid var(--terre-cuite); border-color:var(--terre-cuite);}
-    textarea{resize:vertical; min-height:110px;}
-    .form-note{font-size:.82rem; color:var(--ardoise-soft); margin-top:14px; padding-top:14px; border-top:1px dashed var(--pierre-light);}
-    .form-status{margin-top:16px; font-size:.9rem; font-weight:500; min-height:1.2em;}
-    .form-status.sending{color:var(--ardoise-soft);}
-    .form-status.success{color:var(--sauge);}
-    .form-status.error{color:var(--terre-cuite-dark);}
-    button[disabled]{opacity:.6; cursor:not-allowed;}
-    footer{background:var(--chaux-warm); border-top:1px solid rgba(36,38,42,.1); padding:52px 0 28px;}
-    .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:32px;}
-    .footer-grid h4{margin-bottom:14px; font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ardoise-soft);}
-    .footer-grid p, .footer-grid li{color:var(--ardoise-soft); font-size:.93rem;}
-    .footer-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;}
-    .footer-bottom{border-top:1px solid rgba(36,38,42,.12); padding-top:18px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:"IBM Plex Mono", monospace; font-size:.72rem; color:var(--ardoise-soft);}
-    @media (max-width:900px){.contact-grid{grid-template-columns:1fr;} .form-row{grid-template-columns:1fr;} .footer-grid{grid-template-columns:1fr;}}
-    @media (max-width:560px){.nav-inner{padding:14px 20px;} .wrap{padding:0 20px;}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Pellegrino Rénovation, Condom (Gers)</title>
+<meta name="description" content="Contactez Pellegrino Rénovation, plâtrier-staffeur à Condom (32100) : téléphone, e-mail, adresse et formulaire. Devis gratuit dans tout le Gers.">
+<meta name="theme-color" content="#B5541A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Pellegrino Rénovation">
+<meta property="og:title" content="Contact — Pellegrino Rénovation, Condom (Gers)">
+<meta property="og:description" content="Contactez Pellegrino Rénovation, plâtrier-staffeur à Condom (32100) : téléphone, e-mail, adresse et formulaire. Devis gratuit dans tout le Gers.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.fig[hidden],.press-media[hidden],.gallery-group[hidden]{display:block}</style></noscript>
+<script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Pellegrino <small>Rénovation</small></a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <nav class="nav-links">
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Prestations</a>
-        <a href="realisations.html">Réalisations</a>
-        <a class="active" href="contact.html">Contact</a>
-        <a class="nav-cta" href="contact.html">Demander un devis</a>
-      </nav>
-      <label class="burger" for="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
-    </div>
-  </header>
-
-  <div class="page-banner">
-    <div class="wrap">
-      <h1>Parlons de votre projet</h1>
-      <p>Devis gratuit, réponse rapide. Le plus simple reste souvent un appel direct.</p>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="favicon.svg" alt="" width="36" height="36"><span>Pellegrino Rénovation</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="btn btn-primary btn-small" href="devis.html">Demander un devis</a>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+<section class="page-head">
+  <div class="wrap">
+    <h1>Contact</h1>
+    <p class="lead">Devis gratuit, réponse rapide. Le plus simple reste souvent un appel direct.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:1rem">
+  <div class="wrap contact-grid">
+    <ul class="coords">
+      <li><b>Téléphone</b><a href="tel:+33648061892">06 48 06 18 92</a></li>
+      <li><b>E-mail</b><a href="mailto:ericpellegrino@live.fr">ericpellegrino@live.fr</a></li>
+      <li><b>Adresse</b>9 rue Grichet<br>32100 Condom, Gers<br><a href="https://www.openstreetmap.org/search?query=9%20rue%20Grichet%2032100%20Condom" style="font-size:1rem;font-weight:500">Voir sur la carte</a></li>
+      <li><b>Zone d’intervention</b>Condom et l’ensemble du Gers. Déplacement gratuit.</li>
+    </ul>
+    <div>
+      <h2>Écrivez-moi</h2>
+      <form class="form" action="https://formspree.io/f/mgawkqdr" method="POST" data-formspree>
+  <input type="hidden" name="_subject" value="Message depuis la page Contact">
+  <p class="gotcha" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+  <div class="field"><label for="c-nom">Nom</label><input id="c-nom" name="nom" type="text" autocomplete="name" required></div>
+  <div class="field"><label for="c-tel">Téléphone <span class="hint">(facultatif)</span></label><input id="c-tel" name="telephone" type="tel" autocomplete="tel"></div>
+  <div class="field"><label for="c-mail">Adresse e-mail</label><input id="c-mail" name="email" type="email" autocomplete="email" required></div>
+  <div class="field"><label for="c-msg">Votre message</label><textarea id="c-msg" name="message" required></textarea></div>
+  <button class="btn btn-primary" type="submit">Envoyer le message</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+      <p style="margin-top:1.6rem">Pour un chiffrage de travaux, le <a href="devis.html">formulaire de devis</a> me donne les éléments utiles dès le départ.</p>
     </div>
   </div>
+</section>
 
-  <section>
-    <div class="wrap contact-grid">
+<section class="section section-stone legal" id="mentions">
+  <div class="wrap">
+    <h2>Mentions légales</h2>
+    <h3>Éditeur du site</h3>
+    <p>Eric Pellegrino, entreprise individuelle Pellegrino Rénovation<br>9 rue Grichet, 32100 Condom<br>SIRET 421 291 006 00029<br>TVA non applicable, article 293 B du CGI<br>Téléphone : 06 48 06 18 92 — E-mail : ericpellegrino@live.fr</p>
+    <h3>Directeur de la publication</h3>
+    <p>Eric Pellegrino.</p>
+    <h3>Hébergement</h3>
+    <p>Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
+    <h3>Données personnelles</h3>
+    <p>Les informations saisies dans les formulaires servent uniquement à répondre à votre demande. Elles sont transmises par le service Formspree et ne sont ni vendues ni cédées. Pour les consulter ou les faire supprimer, écrivez à ericpellegrino@live.fr.</p>
+    <h3>Droits sur les contenus</h3>
+    <p>Les photographies et les décors présentés sur ce site sont la propriété de Pellegrino Rénovation. L’article de La Dépêche du Dimanche est reproduit pour illustrer le parcours de l’artisan. Toute autre reproduction sans accord écrit est interdite.</p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
       <div>
-        <div class="info-block">
-          <h4>Téléphone</h4>
-          <p><a class="mono" href="tel:0648061892">06 48 06 18 92</a></p>
-        </div>
-        <div class="info-block">
-          <h4>Adresse</h4>
-          <p>9 rue Grichet<br>32100 Condom, Gers</p>
-        </div>
-        <div class="info-block">
-          <h4>Zone d'intervention</h4>
-          <p>Condom et l'ensemble du Gers</p>
-        </div>
-        <div class="info-block">
-          <h4>Entreprise</h4>
-          <p>Pellegrino Rénovation — EI<br>SIRET 421 291 006 00029<br>TVA non applicable, art. 293 B du CGI</p>
-        </div>
-        <div class="map-card">
-          <svg viewBox="0 0 260 200" width="100%" height="200" role="img" aria-label="Repère du Gers, Condom">
-            <path d="M30 40 L90 20 L160 30 L220 55 L235 100 L210 150 L150 175 L90 165 L45 135 L20 90 Z" fill="#EDE3CC" stroke="#A79878" stroke-width="1.5"/>
-            <circle cx="95" cy="70" r="6" fill="#BE5A2E"/>
-            <circle cx="95" cy="70" r="11" fill="none" stroke="#BE5A2E" stroke-width="1.5"/>
-            <text x="108" y="74" font-family="IBM Plex Mono, monospace" font-size="11" fill="#24262A">Condom</text>
-            <text x="20" y="192" font-family="IBM Plex Mono, monospace" font-size="9" fill="#4A4D52">GERS · 32</text>
-          </svg>
-          <div class="cap">Zone d'intervention — Gers (32)</div>
-        </div>
+        <h2>Pellegrino Rénovation</h2>
+        <p>Plâtrerie, staff décoratif, placo, isolation, carrelage et peinture à Condom, dans le Gers.</p>
       </div>
-
       <div>
-        <form id="contact-form" action="https://formspree.io/f/mgawkqdr" method="POST">
-          <input type="hidden" name="_subject" value="Nouvelle demande de devis — site Pellegrino Rénovation">
-          <div class="form-row">
-            <div class="field"><label for="nom">Nom</label><input type="text" id="nom" name="nom" placeholder="Votre nom" required></div>
-            <div class="field"><label for="tel">Téléphone</label><input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field full"><label for="email">E-mail</label><input type="email" id="email" name="email" placeholder="vous@exemple.fr" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field full"><label for="service">Type de travaux</label><select id="service" name="service"><option>Plâtrerie / placo</option><option>Isolation</option><option>Carrelage</option><option>Peinture</option><option>Plusieurs corps de métier</option></select></div>
-          </div>
-          <div class="form-row">
-            <div class="field full"><label for="message">Votre projet</label><textarea id="message" name="message" placeholder="Décrivez votre projet, la surface concernée, le délai souhaité..." required></textarea></div>
-          </div>
-          <button type="submit" class="btn btn-primary" id="contact-submit">Envoyer la demande</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-note">Réponse par e-mail à l'adresse indiquée. Pour une réponse immédiate, appelez directement le <a class="mono" href="tel:0648061892">06 48 06 18 92</a>.</p>
-        </form>
+        <h2>Contact</h2>
+        <ul>
+          <li>9 rue Grichet, 32100 Condom</li>
+          <li><a href="tel:+33648061892">06 48 06 18 92</a></li>
+          <li><a href="mailto:ericpellegrino@live.fr">ericpellegrino@live.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul>
+          <li><a href="services.html">Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+          <li><a href="contact.html#mentions">Mentions légales</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <h4>Pellegrino Rénovation</h4>
-          <p>Entreprise individuelle de second œuvre — plâtrerie, isolation, carrelage et peinture.<br>Basée à Condom, intervient dans tout le Gers.</p>
-        </div>
-        <div>
-          <h4>Navigation</h4>
-          <ul><li><a href="index.html">Accueil</a></li><li><a href="services.html">Prestations</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li></ul>
-        </div>
-        <div>
-          <h4>Coordonnées</h4>
-          <ul><li>9 rue Grichet, 32100 Condom</li><li class="mono">06 48 06 18 92</li><li>SIRET 421 291 006 00029</li></ul>
-        </div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Pellegrino Rénovation — EI, TVA non applicable, art. 293 B du CGI</span><span>Site conçu pour un artisan du Gers</span></div>
-    </div>
-  </footer>
-
-  <script>
-    (function(){
-      var form = document.getElementById('contact-form');
-      var status = document.getElementById('form-status');
-      var submitBtn = document.getElementById('contact-submit');
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        status.className = 'form-status sending';
-        status.textContent = 'Envoi en cours...';
-        submitBtn.disabled = true;
-        var data = new FormData(form);
-        fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}}).then(function(res){
-          if(res.ok){
-            form.reset();
-            status.className = 'form-status success';
-            status.textContent = 'Merci, votre demande a bien été envoyée. Je vous recontacte rapidement.';
-          } else {
-            status.className = 'form-status error';
-            status.textContent = "Une erreur s'est produite. Merci d'appeler directement au 06 48 06 18 92.";
-          }
-        }).catch(function(){
-          status.className = 'form-status error';
-          status.textContent = "Impossible d'envoyer le message pour le moment. Merci d'appeler directement au 06 48 06 18 92.";
-        }).finally(function(){ submitBtn.disabled = false; });
-      });
-    })();
-  </script>
+    <p class="foot-bottom">© 2026 Pellegrino Rénovation, entreprise individuelle. SIRET 421 291 006 00029. TVA non applicable, article 293 B du CGI.</p>
+  </div>
+</footer>
 </body>
 </html>
